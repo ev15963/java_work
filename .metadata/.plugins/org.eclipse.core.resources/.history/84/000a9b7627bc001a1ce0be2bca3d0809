@@ -1,0 +1,14 @@
+package com.lsw;
+
+public class EMPMainClass {
+	public static void main(String[] args) {
+		int[] age={27,34,28,26,41,28,42,29,29,32};
+		int[] pay={460,200,250,300,300,200,350,200,400,440};
+		String[] code={"JP", "FR", "JP", "US", "CN", "DE", "KR", "JP", "DE","KR"};
+		//국내에 근무하는 인원 수
+		//code배열/ 인원수(int count=0)
+		//인원수 : code 배열의 값들 중 "KR"과 같은 지를 비교
+		//비교 : if(){ }
+		//if(   ) {    }
+	}
+}
