@@ -42,3 +42,4 @@ Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find
 	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:430) ~[na:na]
 	... 8 common frames omitted
 2020-07-02 10:22:51,411 [Worker-21] INFO  o.e.jgit.transport.TransportHttp - URI 'https://www.github.com/ev15963/java_work': following HTTP redirect #0  https://www.github.com/ev15963/java_work/ -> https://github.com/ev15963/java_work.git/
+2020-07-03 08:48:19,349 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

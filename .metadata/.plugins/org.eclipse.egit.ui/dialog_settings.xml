@@ -16,16 +16,27 @@
 		<item value="admin &lt;admin@DESKTOP-9GC530A&gt;"/>
 		<item value="ev15963 &lt;ev15963@hs.ac.kr&gt;"/>
 	</list>
+	<section name="PushToGerritPage">
+		<item value="master" key="Repository[C:\git\.git].lastBranch"/>
+		<item value="https://www.github.com/ev15963/java_work" key="Repository[C:\git\.git].lastUri"/>
+	</section>
 	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
 		<item value="666" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 		<item value="458" key="DIALOG_HEIGHT"/>
-		<item value="8" key="DIALOG_X_ORIGIN"/>
-		<item value="315" key="DIALOG_Y_ORIGIN"/>
+		<item value="340" key="DIALOG_X_ORIGIN"/>
+		<item value="71" key="DIALOG_Y_ORIGIN"/>
 		<list key="sashWeights">
 			<item value="600"/>
 			<item value="400"/>
 		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.repository.CreateBranchPage$SourceSelectionDialog.dialogBounds">
+		<item value="538" key="DIALOG_WIDTH"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+		<item value="484" key="DIALOG_HEIGHT"/>
+		<item value="-7" key="DIALOG_X_ORIGIN"/>
+		<item value="-131" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.egit.ui.internal.pull.PullResultDialog.dialogBounds">
 		<item value="612" key="DIALOG_WIDTH"/>
@@ -34,7 +45,29 @@
 		<item value="181" key="DIALOG_X_ORIGIN"/>
 		<item value="257" key="DIALOG_Y_ORIGIN"/>
 	</section>
+	<section name="org.eclipse.egit.ui.internal.merge.MergeResultDialog.dialogBounds">
+		<item value="417" key="DIALOG_WIDTH"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+		<item value="199" key="DIALOG_HEIGHT"/>
+		<item value="760" key="DIALOG_X_ORIGIN"/>
+		<item value="396" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.dialogs.CheckoutDialog.dialogBounds">
+		<item value="538" key="DIALOG_WIDTH"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+		<item value="484" key="DIALOG_HEIGHT"/>
+		<item value="243" key="DIALOG_X_ORIGIN"/>
+		<item value="62" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="GitCommitMessageComponent">
+		<list key="C:\work\emp2_prj\.git">
+			<item value="false"/>
+			<item value="admin &lt;admin@DESKTOP-9GC530A&gt;"/>
+			<item value=" 완료 7/2"/>
+			<item value="admin &lt;admin@DESKTOP-9GC530A&gt;"/>
+			<item value="6b805961ed899b6e6b15fa0848a64104a96246af"/>
+			<item value="0"/>
+		</list>
 		<list key="C:\git\.git">
 			<item value="empty"/>
 		</list>
