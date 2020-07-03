@@ -137,6 +137,23 @@ public class MemberMainClass {
 		for(int i=0; i<numVisit.length;i++) {
 			System.out.println(numVisit[i]+" =>"+i);
 		}
+		
+		for(String n:name) {
+			System.out.println(n);
+		}
+		
 	} //main End
 
+	// 데이터 확인 메서드
+	public void conf(String[] n) { //String[] name=new String[98];
+		for(String name: n) {
+			System.out.println(name);
+		}	
+	}
+	
+	public void conf2(int[] n) { //String[] name=new String[98];
+		for(int name: n) {
+			System.out.println(name);
+		}	
+	}
 } //class End
