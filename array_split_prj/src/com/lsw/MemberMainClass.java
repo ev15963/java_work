@@ -142,15 +142,15 @@ public class MemberMainClass {
 		conf(name); // to static으로 변경
 		conf2(numVisit);
 		System.out.println("방문횟수 합하는 메소드");
-		System.out.println(merge(numVisit));
+		System.out.println(sum(numVisit));
 		
-		int s = merge(numVisit); //합 저장변수
+		int s = sum(numVisit); //합 저장변수
 		System.out.println(s);
 
 		double d = avg(s, numVisit.length); // 평균 저장변수
 		System.out.println(d); // 결과 확인
 
-		s = merge(age);
+		s = sum(age);
 		d = avg(s, age.length);
 		System.out.println(d);
 
@@ -178,7 +178,7 @@ public class MemberMainClass {
 	}
 
 	// 방문횟수, 연령대 값을 합하는 메소드 10대, 20대, 30대 나눠서
-	public static int merge(int[] n) {
+	public static int sum(int[] n) {
 		int sum = 0; // 값을 누적하는 변수
 		for (int k : n) { // n=> numVisit 배열, k => 배열에서 추출된 값 저장
 			sum = sum + k; // sum+=k와 동일.
