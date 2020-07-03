@@ -146,6 +146,8 @@ public class MemberMainClass {
 		conf2(numVisit);
 		System.out.println("방문횟수 합하는 메소드");
 		System.out.println(merge(numVisit));
+		int s=merge(numVisit);
+		System.out.println(s);
 	} //main End
 
 	// 데이터 확인 메서드
