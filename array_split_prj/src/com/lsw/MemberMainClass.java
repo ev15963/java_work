@@ -148,7 +148,17 @@ public class MemberMainClass {
 		System.out.println(merge(numVisit));
 		int s=merge(numVisit);
 		System.out.println(s);
+		
+		double d =avg(s,numVisit.length); //방문횟수 평균
+		System.out.println(d); //결과 확인
 	} //main End
+	
+	//방문횟수, 연령의 평균을 구하는 메소드
+	public static double avg(int a, int c) {
+//		double d = (a*1.0)/c;
+//		return d;
+		return (a*1.0)/c;
+	}
 
 	// 데이터 확인 메서드
 	public static void conf(String[] n) { //String[] name=new String[98];
