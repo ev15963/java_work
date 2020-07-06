@@ -15,6 +15,11 @@ public class MainClass {
 		System.out.println(pc5.year);
 		ProfessorClass pc6 = new ProfessorClass("92502", "740101-1830264", "장민석", 910, "부교수", "2005");
 		System.out.println(pc6.year);
+		
+		int sum = 0;
+//		sum=pc1.pay+pc2.pay+pc3.pay+pc4.pay+pc5.pay+pc6.pay;
+		ProfessorClass[] profs = {pc1, pc2, pc3, pc4, pc5, pc6};
+		System.out.println(profs[0].year);
 	}
 
 }
