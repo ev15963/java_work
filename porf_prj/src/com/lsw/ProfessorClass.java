@@ -54,6 +54,6 @@ public class ProfessorClass {
 	public void jaeMethod(String year) {
 		
 		int y = Integer.parseInt(year);
-		this.jae= 2020-y+1;
+		this.jae= 2020-y;
 	} // jaeMethod() END
 } // Å¬·¡½º END
