@@ -6,7 +6,7 @@ public class ProfessorClass {
 	public String n, jumin, name, rank, year;
 	public int pay;
 	
-	public ProfessorClass() {
-		// TODO Auto-generated constructor stub
-	}
-}
+	public ProfessorClass(String no, String j, String n, int p, String r, String y) {
+		
+	} // 생성자 END
+} // 클래스 END
