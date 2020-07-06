@@ -6,9 +6,9 @@ public class ProfessorClass {
 	//인스턴스는 클래스가 객체로 생성되는 과정
 	//생성된 객체는 하나의 인스턴스 결과..
 	public String n, jumin, name, rank, year;
-	public int pay;
+	public int pay, age;
 	
-	public ProfessorClass(String no, String j, String n, int p, String r, String y) {
+	public ProfessorClass(String no, String j, String n, int p, String r, String y, int a) {
 		
 		this.n=no; // 검색속도 빠름 바로 public String가서 찾음
 		this.jumin=j;
@@ -16,5 +16,6 @@ public class ProfessorClass {
 		this.rank=r;
 		this.pay=p;
 		this.year=y;
+		this.age=a;
 	} // 생성자 END
 } // 클래스 END
