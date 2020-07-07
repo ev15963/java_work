@@ -11,6 +11,8 @@ public class MainClass {
 			if(dc.books[i].author.endsWith(name))
 				System.out.println(dc.books[i].title);
 
+		String test="   ddd  dddd   ";
+		System.out.println("_"+test.trim()+"__");
 
 	}
 }
