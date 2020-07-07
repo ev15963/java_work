@@ -22,14 +22,14 @@ public class MainClass {
 		DataClass.initEMP();
 		String dName = "°æ¸®ºÎ";
 		String dNo="";
-		for (int i=0;i<DataClass.dept[i].deptName.length();i++) {
+		for (int i=0;i<DataClass.dept.length;i++) {
 			if(DataClass.dept[i].deptName.equals(dName)) {
 				dNo=DataClass.dept[i].deptNo;
 			//	System.out.println(i); //0
 			}
 		}
 		
-		for (int i=0;i<DataClass.emps[i].deptNo.length();i++) {
+		for (int i=0;i<DataClass.emps.length;i++) {
 			if(DataClass.emps[i].deptNo.equals(dNo)) {
 				System.out.println(DataClass.emps[i].empName);
 			}
