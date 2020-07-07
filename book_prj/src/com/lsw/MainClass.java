@@ -18,6 +18,7 @@ public class MainClass {
 			}
 		}
 		int sum=0;
+		
 		System.out.println("구매도서명");
 		System.out.println("-----------------------");
 		for(int i =0;i<dc.books.length;i++) {
@@ -29,6 +30,22 @@ public class MainClass {
 		System.out.println("-----------------------");
 		System.out.println("총 구매가격 : "+sum+" 원");
 		
+		
+		
+	/*	
+		String title=""; //장바구니에 담긴 저자 책 제목들 저장변수
+		int sumPrice=0;
+		for(int i=0; i<dc.books.length; i++) {
+			if(dc.books[i].cart==true) {
+				titles=titles+dc.books[i].title+",";
+				sumPrice=sumPrice+dc.books[i].rPrice;
+			}
+		}
+		
+		String[] titleArray = title.split(",");
+		System.out.println();
+		
+		*/
 //		for(int i=0;i<dc.books.length;i++) //역순출력
 //			if(dc.books[i].author.endsWith(name))
 //				System.out.println(dc.books[i].title);
