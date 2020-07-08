@@ -35,10 +35,29 @@ public class MethodClass {
 	/** 2. 학생정보문자열 분리 메서드 **/
 	public static String[] stringSplit(String s) {
 		return s.split(",");
-		
 	}
 	
 	/** 3. 학과 번호를 학과며으로 변경 메서드 **/
+	//dept_id:"920","923" 		d.depts
+	public static String[] convertDept(String[] d, Department[] dd) { //d : 학과번호들
+		String[] dname=new String[d.length];	//학과 이름
+						// "920"
+		dname[0]=searchDeptName(dd, d[0]); //첫번째 학과번호
+		dname[1]=searchDeptName(dd, d[1]); //두번째 학과번호
+		return dname;
+	}
+										// d.depts 				"920"
+	public static String searchDeptName(Department[] depts, String sName) {
+		String dName="";
+		for(int idx=0; idx<depts.length; idx++) {
+			if(depts[idx].dept_id.equals(sName)) {
+				dName=depts[idx].dept_name;
+			}
+		}
+		return dName;
+	}
+	
+
 	/** 4. 여학생의 평균나이 구하는 메서드 **/
 	/** 5. 전체 결과 출력하는 메서드 **/
 }
