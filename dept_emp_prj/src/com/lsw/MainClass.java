@@ -36,6 +36,10 @@ public class MainClass {
 		}
 
 		//System.out.println(DataClass.emps[0].empName); //20
+		
+		System.out.println(Math.PI);
+		
+		//Math.PI=3.14F;
 	}
 	
 
