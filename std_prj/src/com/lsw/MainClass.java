@@ -38,10 +38,8 @@ public class MainClass {
 //				}
 //			}
 //		}
-		String[] codeNum = code.split(",");
-		for (int j=0;j<codeNum.length;j++) {
-			j=
-		}
+		String dName="";
+		for (int i=0; i<DataClass.dept.length)
 		
 
 	}

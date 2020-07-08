@@ -1,0 +1,83 @@
+/**  학과 및 학생정보들을 보유하는 클래스 객체생성 **/
+		// 학과정보 배열과 학생정보 배열에 static 이 없기 때문..
+		DataClass dc=new DataClass(); 
+		dc.initDepartments();	// 학과정보 배열에 초기 데이터 대입
+		dc.initStudents();			// 학생정보 배열에 초기 데이터 대입
+
+		/**여학생의 학과명(Department), 이름, 평균 나이 구하기**/
+		// 학과명(학과정보 배열 : depts) 
+		// 성별, 이름, 나이(학생정보 배열 : students)
+		
+		// 0. 검색 성별 설정
+		char searchGender='F';
+		
+		// 1. 학생정보 배열(students)로부터 여학생 검색
+		String names="";		// 검색 학생이름들 : "이름,이름...."
+		String dept_id="";	// 검색 학생 학과번호들 : "학과번호,학과번호...."
+		int ageSum=0;		// 나이 합 
+		int count=0;			// 검색 인원수
+		for(int idx=0; idx<dc.students.length; idx++) {
+			if(dc.students[idx].gender==searchGender) {
+				names=names+dc.students[idx].name+",";		// 학생 이름 누적
+				dept_id=dept_id+dc.students[idx].dept_id+","; // 학생 학과번호 누적
+				ageSum=ageSum+dc.students[idx].age;			// 학생 나이 누적
+				count=count+1;	// count++ 와 동일				// 인원수 증가
+			}
+		}
+
+/**		검색 결과 확인
+		System.out.println(names);
+		System.out.println(dept_id);
+		System.out.println(ageSum);
+		System.out.println(count);
+**/		
+		// 2. 학생정보문자열 분리
+		String[] namesArr=names.split(",");
+		String[] dept_idArr=dept_id.split(",");
+//-------------------------------------------------------------------------		
+		
+		// 2. 학과 번호를 학과명으로 변경
+		String[] deptNames=new String[dept_idArr.length];
+		deptNames[0]=searchDeptName(dc.depts, dept_idArr[0]);
+		deptNames[1]=searchDeptName(dc.depts, dept_idArr[1]);
+
+/**		학과이름 결과 확인
+ * 		System.out.println(deptNames[0]); 
+ * 		System.out.println(deptNames[1]); 
+**/
+		
+		// 3. 여학생의 평균나이 구하기 : (float)ageSum/count 
+		double avgAGE=(float)ageSum/count ;
+		
+/**    평균 나이 확인
+ * 		System.out.println(avgAGE);
+ */
+		// 4. 전체 결과 출력하기
+		System.out.println("여학생들 정보");
+		System.out.println("---------------");
+		System.out.println("학과 / 이름");
+		for(int idx=0; idx<deptNames.length; idx++) {
+			System.out.println(deptNames[idx]+" / "+namesArr[idx]);
+		}
+		System.out.println("---------------");
+		System.out.println("평균나이 : " + avgAGE);
+
+
+
+
+
+
+
+
+
+/** 학과번호를 이용하여 학과명을 구하는 메서드 **/
+	//deptNames[0]=searchDeptName(dc.depts, dept_idArr[0]);
+	public static String searchDeptName(Department[] depts, String sName) {
+		String dName="";
+		for(int idx=0; idx<depts.length; idx++) {
+			if(depts[idx].dept_id.equals(sName)) {
+				dName=depts[idx].dept_name;
+			}
+		}
+		return dName;
+	}

@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="sum" key="selection"/>
+		<item value="std[] = new Student(&quot;" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="(&quot;"/>
 			<item value="merge"/>
 			<item value="비공개"/>
 			<item value="비공"/>
@@ -15,6 +16,7 @@
 			<item value="\r\n"/>
 		</list>
 		<list key="replacehistory">
+			<item value="std[] = new Student(&quot;"/>
 			<item value="sum"/>
 			<item value=""/>
 		</list>

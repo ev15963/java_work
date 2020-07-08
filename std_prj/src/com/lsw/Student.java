@@ -17,4 +17,8 @@ public class Student {
 		this.stdAdd=sa;
 		this.stdHakgua=sh;
 	}
+	
+	//나이와 성별을 구한든 메서드에게 값을 전달하기 위한 분리 작업
+	
+	//
 }
