@@ -20,10 +20,15 @@ public class MainClass {
 		String[] dept_id = MethodClass.stringSplit(result[1]);
 //		System.out.println(dept_id[1]);
 		
+		
 		/** 3. 학과 번호를 학과명으로 변경 메서드 **/
 		String[] deptNames = MethodClass.convertDept(dept_id, d.depts);
 		for (int i=0;i<deptNames.length;i++) {
 		System.out.println(deptNames[i]);
+		}
+		
+		for (int i = 0; i < deptNames.length; i++) {
+			System.out.println(deptNames[i]);
 		}
 		
 		/** 4. 여학생의 평균나이 구하는 메서드 **/

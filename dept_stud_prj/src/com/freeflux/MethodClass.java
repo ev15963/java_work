@@ -73,9 +73,15 @@ public class MethodClass {
 			System.out.println(s1[idx]);
 		}
 		System.out.println(s2);
+		
+		
+		//deptNames
 		for (int i = 0; i < s3.length; i++) {
 			System.out.println(s3[i]);
 		}
+		
+	
+		
 		System.out.println(s4);
 	}
 	//
