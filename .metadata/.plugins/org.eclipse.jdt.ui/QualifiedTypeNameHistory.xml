@@ -2,5 +2,7 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="com.lsw.Student"/>
+<fullyQualifiedTypeName name="javax.naming.InitialContext"/>
+<fullyQualifiedTypeName name="com.lsw.MethodClass"/>
 <fullyQualifiedTypeName name="com.lsw.DataClass"/>
 </qualifiedTypeNameHistroy>

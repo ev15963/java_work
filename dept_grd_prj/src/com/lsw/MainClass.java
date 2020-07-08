@@ -18,9 +18,13 @@ public class MainClass {
 			}
 		}
 
-		System.out.println(dNum);
-		dNum.split(",");
-		System.out.println(dNum);
+//		System.out.println(dNum);
+		
+		public void dNumMethod() {
+			for (int i=0;i<dNum.split(",").length;i++) {
+				System.out.println(dNum.split(",")[i]);
+			}
+		}
 		
 //		String dlfma(String same) {
 //			for (int i=0;i<dc.std.length;i++) {
