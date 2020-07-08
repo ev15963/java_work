@@ -14,7 +14,7 @@ public class MethodClass {
 	}
 
 	/** 1. 학생정보 배열(students)로부터 여학생 검색 메서드 **/
-	public static String searchInfo(char c, Student[] s) {
+	public static String[] searchInfo(char c, Student[] s) {
 		String names = ""; // 검색 학생이름들 : "이름,이름...."
 		String dept_id = ""; // 검색 학생 학과번호들 : "학과번호,학과번호...."
 		int ageSum = 0; // 나이 합
@@ -29,5 +29,16 @@ public class MethodClass {
 		}
 		String[] resultData= {names, dept_id, (ageSum+""), (count+"") };
 		return resultData; //void -> String으로 변환
+		
 	}
+
+	/** 2. 학생정보문자열 분리 메서드 **/
+	public static String[] stringSplit(String s) {
+		return s.split(",");
+		
+	}
+	
+	/** 3. 학과 번호를 학과며으로 변경 메서드 **/
+	/** 4. 여학생의 평균나이 구하는 메서드 **/
+	/** 5. 전체 결과 출력하는 메서드 **/
 }
