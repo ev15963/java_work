@@ -27,45 +27,60 @@ public class MethodClass {
 				count = count + 1; // count++ 와 동일 // 인원수 증가
 			}
 		}
-		String[] resultData= {names, dept_id, (ageSum+""), (count+"") };
-		return resultData; //void -> String으로 변환
-		
+		String[] resultData = { names, dept_id, (ageSum + ""), (count + "") };
+		return resultData; // void -> String으로 변환
+
 	}
 
 	/** 2. 학생정보문자열 분리 메서드 **/
 	public static String[] stringSplit(String s) {
 		return s.split(",");
 	}
-	
+
 	/** 3. 학과 번호를 학과며으로 변경 메서드 **/
-	//dept_id:"920","923" 		d.depts
-	public static String[] convertDept(String[] d, Department[] dd) { //d : 학과번호들
-		String[] dname=new String[d.length];	//학과 이름
-						// "920"
-		dname[0]=searchDeptName(dd, d[0]); //첫번째 학과번호
-		dname[1]=searchDeptName(dd, d[1]); //두번째 학과번호
+	// dept_id:"920","923" d.depts
+	public static String[] convertDept(String[] d, Department[] dd) { // d : 학과번호들
+		String[] dname = new String[d.length]; // 학과 이름
+		// "920"
+		dname[0] = searchDeptName(dd, d[0]); // 첫번째 학과번호
+		dname[1] = searchDeptName(dd, d[1]); // 두번째 학과번호
 		return dname;
 	}
-										// d.depts 				"920"
+
+	// d.depts "920"
 	public static String searchDeptName(Department[] depts, String sName) {
-		String dName="";
-		for(int idx=0; idx<depts.length; idx++) {
-			if(depts[idx].dept_id.equals(sName)) {
-				dName=depts[idx].dept_name;
+		String dName = "";
+		for (int idx = 0; idx < depts.length; idx++) {
+			if (depts[idx].dept_id.equals(sName)) {
+				dName = depts[idx].dept_name;
 			}
 		}
 		return dName;
 	}
-	
 
 	/** 4. 여학생의 평균나이 구하는 메서드 **/
 	public static double avg(String s, String c) {
-		int sum=Integer.parseInt(s);
-		int count=Integer.parseInt(c);
-		
-		return (float)sum/count;
+		int sum = Integer.parseInt(s);
+		int count = Integer.parseInt(c);
+
+		return (float) sum / count;
 	}
+
 	/** 5. 전체 결과 출력하는 메서드 **/
-	
-	
+
+	public static void answer(String[] s1, String s2, String[] s3, double s4) {
+		for (int idx = 0; idx < s1.length; idx++) {
+			System.out.println(s1[idx]);
+		}
+		System.out.println(s2);
+		for (int i = 0; i < s3.length; i++) {
+			System.out.println(s3[i]);
+		}
+		System.out.println(s4);
+	}
+	//
+	// System.out.println(dept_id[1]);
+	//
+	// System.out.println(avg);
+
 }

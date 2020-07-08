@@ -18,19 +18,26 @@ public class MainClass {
 		/** 2. 학생정보문자열 분리 메서드 **/
 		String[] names = MethodClass.stringSplit(result[0]);
 		String[] dept_id = MethodClass.stringSplit(result[1]);
-		System.out.println(dept_id[1]);
+//		System.out.println(dept_id[1]);
 		
 		/** 3. 학과 번호를 학과명으로 변경 메서드 **/
 		String[] deptNames = MethodClass.convertDept(dept_id, d.depts);
+		for (int i=0;i<deptNames.length;i++) {
+		System.out.println(deptNames[i]);
+		}
 		
 		/** 4. 여학생의 평균나이 구하는 메서드 **/
 		double avg=MethodClass.avg(result[2], result[3]);
-		System.out.println(avg);
+//		System.out.println(avg);
 		
 		/** 5. 전체 결과 출력하는 메서드 **/
+		System.out.println("전체 결과");
+		MethodClass.answer(result, dept_id[1], deptNames, avg);
+		
 //		for (int i=0;i<)
 //		System.out.println(deptNames[i]);
 	} // main() END
+
 	
 
 	
