@@ -24,8 +24,12 @@ public class MainClass {
 		String[] deptNames = MethodClass.convertDept(dept_id, d.depts);
 		
 		/** 4. 여학생의 평균나이 구하는 메서드 **/
-		/** 5. 전체 결과 출력하는 메서드 **/
+		double avg=MethodClass.avg(result[2], result[3]);
+		System.out.println(avg);
 		
+		/** 5. 전체 결과 출력하는 메서드 **/
+//		for (int i=0;i<)
+//		System.out.println(deptNames[i]);
 	} // main() END
 	
 

@@ -59,5 +59,13 @@ public class MethodClass {
 	
 
 	/** 4. 여학생의 평균나이 구하는 메서드 **/
+	public static double avg(String s, String c) {
+		int sum=Integer.parseInt(s);
+		int count=Integer.parseInt(c);
+		
+		return (float)sum/count;
+	}
 	/** 5. 전체 결과 출력하는 메서드 **/
+	
+	
 }
