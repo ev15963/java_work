@@ -1,20 +1,20 @@
 package com.lsw;
 
 public class DataClass {
-	Department[] depts = new Department[3];
-	Student[] std = new Student[8];
-	Takes[] tk = new Takes[12];
+	public static Department[] depts = new Department[3];
+	public static Student[] std = new Student[8];
+	public static Takes[] tk = new Takes[12];
 	public DataClass() {
 		
 	}
 	
-	public void initDepartments() {
+	public static void initDepartments() {
 		depts[0]=new Department(920, "컴퓨터공학과", "201호");
 		depts[1]=new Department(923, "산업공학과", "207호");
 		depts[2]=new Department(925, "전자공학과", "308호");
 	}
 	
-	public void initStudents() {
+	public static void initStudents() {
 		std[0]=new Student("1292001", "900424-1825409", "김광식", 3, "서울", 920);
 		std[1]=new Student("1292002", "900305-1730021", "김정현", 3, "서울", 920);
 		std[2]=new Student("1292003", "891021-2308302", "김현정", 4, "대전", 920);
@@ -25,7 +25,7 @@ public class DataClass {
 		std[7]=new Student("1292502", "911011-1809003", "백태성", 3, "서울", 925);
 	}
 	
-	public void initTakes() {
+	public static void initTakes() {
 		tk[0]=new Takes("1292001", "C101-01", "B+");
 		tk[1]=new Takes("1292001", "C103-01", "A+");
 		tk[2]=new Takes("1292001", "C301-01", "A");
