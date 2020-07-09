@@ -5,8 +5,8 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		/** 0. 학과, 학생및 성적정보들을 보유하는 클래스 객체 생성 메서드 호출**/
-		
-		
+		MethodClass.createObject();
+//		System.out.println(MethodClass.dc.takes.length); //출력되는지 확인
 		/** 학점이 A이상(A, A+) 인 학생들의 이름과 학번, 학과명을 출력 **/
 		/** 1. 학점이 A이상(A, A+) 인 학생들의 학번 검색 메서드 호출 **/
 		

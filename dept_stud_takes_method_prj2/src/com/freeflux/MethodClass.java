@@ -8,7 +8,7 @@ public class MethodClass {
 
 	/** 0. 학과, 학생및 성적정보들을 보유하는 클래스 객체 생성 메서드 선언 **/
 	public static void createObject() {
-
+		dc= new DataClass();
 	} // createObject() END
 	
 	/** 1. 학점이 A이상(A, A+) 인 학생들의 학번 검색 메서드 호출 **/
