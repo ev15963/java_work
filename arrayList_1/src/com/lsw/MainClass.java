@@ -36,9 +36,9 @@ public class MainClass {
 		ArrayList<Integer> initNo=new ArrayList<Integer>();
 		ArrayList<Integer> lottoNo=new ArrayList<Integer>();
 		
-		//1
-		for (int i=0;i<initNo.size();i++) {
-			
+		//1. 1~45까지 넣어주기
+		for (int i=0;i<46;i++) {
+			initNo.add(i);
 		}
 		
 		//2. 임의의(무작의) index 추출(6회)
