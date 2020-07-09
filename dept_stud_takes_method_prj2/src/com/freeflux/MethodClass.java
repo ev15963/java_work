@@ -34,21 +34,24 @@ public class MethodClass {
 	/**학번 중복 제거 메서드 호출**/
 	/** 2. 검색된 학번을 이용하여 학생들의 이름과 학과번호 검색 메서드 호출 **/
 	public static String[] searchStudentInfo(String stu_id) { //"1292001, ..."
+//		dc.initStudents();
+////		System.out.println(dc.students[7].stu_id);
+//		String[] temp= {"",""}; //temp[0]:이름들/ temp[1]:학과번호들
+//		String[] s_ids=stu_id.split(","); //"1292001" "1292001"
+//		for (int n=0;n<s_ids.length;n++) {
+//			for(int i=0;i<dc.students.length;i++) {
+//				if(dc.students[i].stu_id.equals(s_ids[n])) {
+//					temp[0]=temp[0]+dc.students[i].name+",";
+//					temp[1]=temp[1]+dc.students[i].dept_id+",";
+//				}
+//			}
+//		}
+////		System.out.println(temp[0]);
+////		System.out.println(temp[1]);
+//		return temp;
+		
 		dc.initStudents();
-//		System.out.println(dc.students[7].stu_id);
-		String[] temp= {"",""}; //temp[0]:이름들/ temp[1]:학과번호들
-		String[] s_ids=stu_id.split(","); //"1292001" "1292001"
-		for (int n=0;n<s_ids.length;n++) {
-			for(int i=0;i<dc.students.length;i++) {
-				if(dc.students[i].stu_id.equals(s_ids[n])) {
-					temp[0]=temp[0]+dc.students[i].name+",";
-					temp[1]=temp[1]+dc.students[i].dept_id+",";
-				}
-			}
-		}
-//		System.out.println(temp[0]);
-//		System.out.println(temp[1]);
-		return temp;
+		String[]
 
 	} // searchStudentInfo() END
 
