@@ -37,24 +37,65 @@ public class MainClass {
 		ArrayList<Integer> lottoNo=new ArrayList<Integer>();
 		
 		//1. 1~45까지 넣어주기
-		for (int i=0;i<46;i++) {
-			initNo.add(i);
-		}
+//		for (int i=0;i<46;i++) {
+//			initNo.add(i);
+//		}
+		
+		
+
 		
 		//2. 임의의(무작의) index 추출(6회)
-		int temp=0; //임의의  index 번호 임시저장
-		for(int t=0; t<6; t++) {
-			temp=random.nextInt(initNo.size()); //0~44 임으의 index 번호
+//		int temp=0; //임의의  index 번호 임시저장
+//		for(int t=0; t<6; t++) {
+//			temp=random.nextInt(initNo.size()); //0~44 임으의 index 번호
+//			lottoNo.add(initNo.remove(temp));
+//		}
+		
+		//1. 1~45까지 넣어주기
+		for (int i =0;i<46;i++) {
+			initNo.add(i);
+		}
+		//2. 임의의(무작의) index 추출(6회)
+		int temp=0;
+		for (int i=0;i<6;i++) {
+			temp=random.nextInt(initNo.size());
+			System.out.println(temp);
 			lottoNo.add(initNo.remove(temp));
+//			System.out.println("삭제:"+initNo.remove(temp));
 		}
 		
-		//3. 추출된 로또번호 확인
-		for(int t=0;t<6;t++) {
-			System.out.println(lottoNo.get(t));
+		
+//		//3. 추출된 로또번호 확인		get
+		
+		
+		for(int i=0;i<6;i++) {
+			
+			System.out.println(lottoNo.get(i));
 		}
 		
-		//4. 3번을 편하게 사용
-		System.out.print(lottoNo.toString());
 		
+		
+		
+		
+		
+		
+//		//4. 3번을 편하게 사용		
+		
+		System.out.println("편하게"+lottoNo.toString());
+
+		
+		
+		
+		
+		
+		
+//		//3. 추출된 로또번호 확인
+//		for(int t=0;t<6;t++) {
+//			System.out.println(lottoNo.get(t));
+//		}
+//		
+//		//4. 3번을 편하게 사용
+//		System.out.print(lottoNo.toString());
+//		
 	}//main() END
 }//클래스  END
