@@ -5,14 +5,17 @@ import java.util.Random;
 public class MainClass {
 
 	public static void main(String[] args) {
-		/** Math.class의 random()과 Random.class의 nextInt() **/
-		//임의의 수 즉, 무작위 수 추출..
-		//Math.class의 random() : 0~1 사이의 실수 (소숫점)
-		System.out.println(Math.random());
-
-		Random r=new Random();
-		//nextInt() 정수 범위지정 : nextInt(10)=> 0~9
-		System.out.println(r.nextInt(10));
+		/** 로또 번호 추출기 **/
+		//로또 번호 : 1~45까지..: ArrayList
+		//6개: for( =1;  <46;  ){ }
+		
+		//무작위 추출 번호 갯수 : 6개 (중복값 없음)
+		//Random.class => nextInt(ArrayList.size())
+		//중복값 없음 : ArrayList.class => remove(index)
+		//6개: for( ;  <6;  )
+		
+		
+		
 		
 	}//main() END
-}
+}//클래스  END
