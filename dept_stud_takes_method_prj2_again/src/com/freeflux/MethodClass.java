@@ -39,25 +39,38 @@ public class MethodClass {
 	/** 2. 검색된 학번을 이용하여 학생들의 이름과 학과번호 검색 메서드 호출 **/
 	public static String[] searchStudentInfo(String t) {
 		dc.initStudent();
-		String temp[] = {"",""};
-		String ts[]=t.split(",");
-		for(int j=0;j<ts.length;j++) {
-			for(int i=0;i<dc.stu.length;i++) {
-				if(dc.stu[i].stuHakburn.equals(ts[j])) {
-//					System.out.println(ts[j]);
-					temp[0] = temp[0]+ dc.stu[i].stuName +",";
-					temp[1] = temp[1]+ dc.stu[i].stuHakburn +",";
+		String temp[] = { "", "" };
+		String ts[] = t.split(",");
+		for (int j = 0; j < ts.length; j++) {
+			for (int i = 0; i < dc.stu.length; i++) {
+				if (dc.stu[i].stuHakburn.equals(ts[j])) {
+					// System.out.println(ts[j]);
+					temp[0] = temp[0] + dc.stu[i].stuName + ",";
+					temp[1] = temp[1] + dc.stu[i].stuNum + ",";
 				}
 			}
 		}
-//		System.out.println(temp[0]);
-//		System.out.println(temp[1]);
+		// System.out.println(temp[0]);
+		// System.out.println(temp[1]);
 		return temp;
 	} // searchStudentInfo() END
 
 	/** 3. 검색된 학번을 이용하여 학과이름 검색 메서드 호출 **/
-	public static void convertDepartmentID() {
-
+	public static String convertDepartmentID(String t) {
+		int no =0;
+		String dnames = "";
+		dc.initStudent();
+		String ts[] = t.split(",");
+		for(int j=0;j<dc.dep.length;j++) {
+			for (int i=0;i<ts.length;i++) {
+				no=Integer.parseInt(ts[i]);
+				if(dc.dep[j]==ts[i]) {
+					
+				}
+			}
+		}
+		System.out.println("no"+no);
+		return null;
 	}
 
 	/** 4. 각 결과 값을 이용하여 결과 출력 메서드 호출 **/
