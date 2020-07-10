@@ -12,5 +12,13 @@ public class Department {
 		this.dept_name=name;
 		this.office=off;
 	} // »ý¼ºÀÚ END
+	
+	public int getDept_id() {
+		return dept_id;
+	}
+	
+	public void setDept_id(int dept_id) {
+		this.dept_id=dept_id;
+	}
 
 } // class END

@@ -21,6 +21,22 @@ public class Student {
 		
 	} // »ı¼ºÀÚ END
 	
+	public String getStu_id() {
+		return stu_id;
+	}
+	
+	public void setStu_id(String stu_id) {
+		this.stu_id=stu_id;
+	}
+	
+
+	public int getDept_id() {
+		return dept_id;
+	}
+	
+	public void setDept_id(int dept_id) {
+		this.dept_id=dept_id;
+	}
 } // class END
 
 
