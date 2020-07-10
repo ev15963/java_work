@@ -51,7 +51,7 @@ public class MethodClass {
 //		return temp;
 		
 		dc.initStudents();
-		String[]
+		//String[]
 
 	} // searchStudentInfo() END
 

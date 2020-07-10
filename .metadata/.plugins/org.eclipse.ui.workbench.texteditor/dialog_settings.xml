@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="tk[0]=new Takes(&quot;" key="selection"/>
+		<item value=".add(" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="[]="/>
 			<item value="(&quot;"/>
 			<item value="("/>
 			<item value="length"/>
@@ -22,9 +23,9 @@
 			<item value="Take"/>
 			<item value="deptNames"/>
 			<item value="merge"/>
-			<item value="비공개"/>
 		</list>
 		<list key="replacehistory">
+			<item value=".add("/>
 			<item value="tk[0]=new Takes(&quot;"/>
 			<item value="stu[0]=new Student(&quot;"/>
 			<item value="dep[0]=new Department("/>
@@ -39,7 +40,6 @@
 			<item value="std[]=new Student(&quot;"/>
 			<item value="std[] = new Student(&quot;"/>
 			<item value="sum"/>
-			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

@@ -9,7 +9,8 @@
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.freeflux.Department"/>
 <fullyQualifiedTypeName name="com.freeflux.MethodClass"/>
+<fullyQualifiedTypeName name="com.lsw.other.PublicClass"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
