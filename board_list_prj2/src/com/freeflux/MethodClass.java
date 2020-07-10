@@ -38,7 +38,7 @@ public class MethodClass {
 	public static void printResult(double avgHit) {
 		String t="조회수";
 		int n=10;
-		System.out.printf("평균%s: %.1f => %d",t,avgHit, n);
+		System.out.printf("평균%s: %.2f => %d",t,avgHit, n);
 	}
 	
 	/** 중복값을 제거하여 반환하는 메서드 선언 **/

@@ -16,6 +16,7 @@ public class MainClass {
 		// 결과 출력하는 메서드 호출
 		MethodClass.printResult(avgHit);
 		
+		System.out.p);
 
 		
 	}  // main() END

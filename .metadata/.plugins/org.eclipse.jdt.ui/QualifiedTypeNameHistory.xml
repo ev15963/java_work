@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="com.lsw.Student"/>
 <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
-<fullyQualifiedTypeName name="com.lsw.MethodClass"/>
 <fullyQualifiedTypeName name="com.lsw.DataClass"/>
 <fullyQualifiedTypeName name="java.lang.Void"/>
+<fullyQualifiedTypeName name="com.lsw.Book"/>
+<fullyQualifiedTypeName name="com.lsw.MethodClass"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.freeflux.Department"/>
+<fullyQualifiedTypeName name="com.freeflux.MethodClass"/>
 </qualifiedTypeNameHistroy>

@@ -2,24 +2,38 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="dC" key="selection"/>
+		<item value="tk[0]=new Takes(&quot;" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="(&quot;"/>
+			<item value="("/>
+			<item value="length"/>
+			<item value=")"/>
+			<item value="boardList"/>
+			<item value="initBook"/>
+			<item value="11"/>
+			<item value="no"/>
+			<item value="searchStudentInfo"/>
 			<item value="dc"/>
 			<item value="data"/>
 			<item value="Take"/>
-			<item value="(&quot;"/>
 			<item value="deptNames"/>
 			<item value="merge"/>
 			<item value="비공개"/>
-			<item value="비공"/>
-			<item value="이춘재"/>
-			<item value="\r\n"/>
 		</list>
 		<list key="replacehistory">
+			<item value="tk[0]=new Takes(&quot;"/>
+			<item value="stu[0]=new Student(&quot;"/>
+			<item value="dep[0]=new Department("/>
+			<item value="Department dep[0]= new Department("/>
+			<item value="size()"/>
+			<item value="))"/>
+			<item value="boardList.add("/>
+			<item value="Book"/>
+			<item value="book[0] = new initBook(11"/>
 			<item value="Takes"/>
 			<item value="tk[0]=new Take(&quot;"/>
 			<item value="std[]=new Student(&quot;"/>
