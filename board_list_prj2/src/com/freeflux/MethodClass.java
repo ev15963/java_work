@@ -22,7 +22,7 @@ public class MethodClass {
 		dc.initBoards();
 		int temp=0; //합 누적 변수
 		for(int i=0;i<dc.boardList.length;i++) {
-			temp=temp+dc.boardList[i].hit;
+			temp=temp+dc.boardList[i].getHit();
 		}
 		return temp;
 	}

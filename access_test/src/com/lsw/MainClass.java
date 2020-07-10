@@ -1,21 +1,21 @@
 package com.lsw;
 
+import java.util.ArrayList;
+
 import com.lsw.other.PublicClass;
 
 public class MainClass {
 
 	public static void main(String[] args) {
-		TestClass t = new TestClass();
-//		t.setP(1000);
-		System.out.println(t.getP());
-//		t.setP(100);
-		//TestClass 내부 변수 p는 private이기 때문에 사용불가!!
-//		DefaultClass defaultC = new DefaultClass();
-//		System.out.println(defaultC.n);
-//		//MainClass와 DefaultClass 같은 패키지
+		PublicClass p1 = new PublicClass();
 		
-//		com.lsw.other.PublicClass pc = new com.lsw.other.PublicClass();
-		PublicClass pcc=new PublicClass();
-		pcc.b=1000;
+		ArrayList<PublicClass> a = new ArrayList<PublicClass>();
+		a.add(p1);
+//		PublicClass n=(PublicClass) a.get(0);
+		int n = a.get(0).b;
+		System.out.println(a.get(0));  //com.lsw.other.PublicClass@7852e922
+		System.out.println(a.get(0).getP());
+		a.get(0).setP(11000);
+		System.out.println(a.get(0).getP());
 	}
 }

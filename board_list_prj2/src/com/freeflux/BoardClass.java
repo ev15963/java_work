@@ -5,7 +5,7 @@ public class BoardClass {
 	public int bno=0;
 	public String title="";
 	public String writer="";
-	public int hit=0;
+	private int hit=0;
 
 	// 11968, "2020 07 08 클래스연습데이터7 (student, takes)" ,  "김광식",  25
 	/** 외부로부터 데이터를 전달받아 멤버변수에 대입하는 생성자 
@@ -18,7 +18,15 @@ public class BoardClass {
 		this.bno=n;
 		this.title=t;
 		this.writer=w;
-		this.hit=h;
+		this.setHit(h);
 	} // 생성자 END
+
+	public int getHit() {
+		return hit;
+	}
+
+	public void setHit(int hit) {
+		this.hit = hit;
+	}
 
 }
