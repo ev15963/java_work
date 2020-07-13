@@ -1,15 +1,11 @@
 package com.lsw;
 
+import java.io.FileNotFoundException;
+
 public class MainClass {
 	public static void main(String[] args) {
-		Parent p = new Parent();
-		Parent c = new Child(); //int child
-		Child cc=(Child)c;
-		cc.prn();
-		
-		PrintClass print=new PrintClass();
-		print.prn();
-//		System.out.println(print.child);
-//		print.
+		FileReadClass f1 = new FileReadClass();
+		f1.readDirectoryAndFiles();
+
 	}
 }
