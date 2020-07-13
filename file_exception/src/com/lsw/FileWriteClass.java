@@ -13,6 +13,8 @@ public class FileWriteClass {
 	/**지정한 파일에 내용 적기**/
 	public void writeFile() {
 		try {
+			
+			
 			fw=new FileWriter(uri);
 			System.out.println("파일쓰기 준비 완료");
 			fw.write("<!doctype html>");
