@@ -57,6 +57,7 @@ public class MethodClass {
 
 	/** 3. 검색된 학번을 이용하여 학과이름 검색 메서드 호출 **/
 	public static String convertDepartmentID(String t) {
+		dc.initDepartment();
 		int no =0;
 		String dnames = "";
 		dc.initStudent();
@@ -64,17 +65,20 @@ public class MethodClass {
 		for(int j=0;j<dc.dep.length;j++) {
 			for (int i=0;i<ts.length;i++) {
 				no=Integer.parseInt(ts[i]);
-				if(dc.dep[j]==ts[i]) {
-					
+				if(dc.dep[j].depCode==no) {
+					System.out.println(dc.dep[j].depCode);
 				}
 			}
+			
 		}
-		System.out.println("no"+no);
 		return null;
 	}
 
 	/** 4. 각 결과 값을 이용하여 결과 출력 메서드 호출 **/
-	public static void printResult() {
+	public static void printResult(String s1, String s2, int i3) {
+		searchStudentID(s1);
+		System.out.println(s2);
+		System.out.println(i3);
 
 	}
 } // MethodClass END
