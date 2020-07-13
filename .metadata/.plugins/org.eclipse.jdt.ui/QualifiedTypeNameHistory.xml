@@ -7,10 +7,12 @@
 <fullyQualifiedTypeName name="com.lsw.Book"/>
 <fullyQualifiedTypeName name="com.lsw.MethodClass"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="com.freeflux.Department"/>
-<fullyQualifiedTypeName name="com.freeflux.MethodClass"/>
 <fullyQualifiedTypeName name="com.lsw.other.PublicClass"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.freeflux.DataClass"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthScrollBarUI"/>
+<fullyQualifiedTypeName name="com.freeflux.MethodClass"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>
