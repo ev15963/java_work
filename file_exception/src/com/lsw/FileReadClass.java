@@ -11,12 +11,19 @@ public class FileReadClass {
 	}// 생성자 END
 
 	public void readDirectoryAndFiles() {
-		File f = new File("c:/");
-		String[] files = f.list();
-		for (String name : files) {
-			System.out.println(name);
-
-		}
+		//File => 파일 또는 폴더(디렉토리) 검색
+		File f = new File("C:/work/file_exception/bin/com/lsw/MainClass.class");
+		System.out.println(f.length());	//파일 크기
+		System.out.println(f.isFile());	//파일인지 여부 : boolean
+		System.out.println(f.canRead());//읽기가능 여부 : boolean
+		System.out.println(f.canWrite());//쓰기가능 여부 : boolean
+		System.out.println(f.lastModified());//마지막 수정일 : 10진수로
+		//1970.1.1 0시 0분 0초 현재까지의 시간..
+//		String[] files = (f.list();
+//		for (String name : files) {
+//			System.out.println(name);
+//
+//		}
 	}
 
 	/** c://filetest의 memo.txt 파일을 읽는 메서드 **/
