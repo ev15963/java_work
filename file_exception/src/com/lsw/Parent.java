@@ -7,6 +7,7 @@ public class Parent {
 		protected int d=40;
 		
 		public Parent() {
+			System.out.println("Parent() 내부");
 		} //생성자 END
 		
 		public void m1() {
