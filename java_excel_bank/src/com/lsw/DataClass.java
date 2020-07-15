@@ -1,9 +1,11 @@
 package com.lsw;
 
+import java.util.ArrayList;
+
 public class DataClass {
 
 	public DataClass() {
-		// TODO Auto-generated constructor stub
+//		public static ArrayList<readExcelFile> 
 	}
 
 }
