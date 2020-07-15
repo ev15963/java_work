@@ -37,7 +37,7 @@ public class ExcelReader {
 			int i = startIndex;  
 
 			String[] c = null;
-			ObjectClass o=null;
+			ObjectClass o=null; //배열 저장
 			
 			for(int count=0; count<list; count++) {
 				c = new String[11];
@@ -57,14 +57,15 @@ public class ExcelReader {
 				o=new ObjectClass(c[0], c[1], c[2], c[3], c[4], c[5], c[6], c[7], c[8], c[9], c[10]);
 				o.variableValues();  // 객체 멤버 변수 값 확인용..
 				
+				DataClass.banks.add(o);
 
-				o=null;
+				o=null; //오류날까봐 하나 넣고 초기화
 				i++;
 			}
 
 		} catch (BiffException | IOException e1) { 
-			// BiffException : xslx확장자를 읽을 때 발생하는 오류 예외처리
-			// IOException : 파일 입출력  오류 예외처리
+//			 BiffException : xslx확장자를 읽을 때 발생하는 오류 예외처리
+//			 IOException : 파일 입출력  오류 예외처리
 			System.out.println(e1.getMessage());
 		}
 
