@@ -2,29 +2,36 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="temp" key="selection"/>
+		<item value="tags+=" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="fw.write("/>
+			<item value="initInsertBookData"/>
+			<item value="readNewsData"/>
+			<item value=");"/>
+			<item value="(&quot;"/>
+			<item value="\&quot;);"/>
+			<item value="__"/>
+			<item value="buffer"/>
 			<item value="temp"/>
 			<item value="nc"/>
 			<item value="dc"/>
-			<item value="(&quot;"/>
 			<item value="[]="/>
 			<item value="("/>
 			<item value="length"/>
 			<item value=")"/>
-			<item value="boardList"/>
-			<item value="initBook"/>
-			<item value="11"/>
-			<item value="no"/>
-			<item value="searchStudentInfo"/>
-			<item value="data"/>
-			<item value="Take"/>
 		</list>
 		<list key="replacehistory">
+			<item value="tags+="/>
+			<item value="));"/>
+			<item value="(new NewsClass(&quot;"/>
+			<item value="&quot;);"/>
+			<item value="&quot;, &quot;"/>
+			<item value="&quot;, &quot; "/>
+			<item value=", "/>
 			<item value="news"/>
 			<item value="nc.add(new NewsClass(&quot;"/>
 			<item value=".add("/>
@@ -33,20 +40,13 @@
 			<item value="dep[0]=new Department("/>
 			<item value="Department dep[0]= new Department("/>
 			<item value="size()"/>
-			<item value="))"/>
-			<item value="boardList.add("/>
-			<item value="Book"/>
-			<item value="book[0] = new initBook(11"/>
-			<item value="Takes"/>
-			<item value="tk[0]=new Take(&quot;"/>
-			<item value="std[]=new Student(&quot;"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="288" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="700" key="DIALOG_X_ORIGIN"/>
-		<item value="413" key="DIALOG_Y_ORIGIN"/>
+		<item value="257" key="DIALOG_X_ORIGIN"/>
+		<item value="256" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
