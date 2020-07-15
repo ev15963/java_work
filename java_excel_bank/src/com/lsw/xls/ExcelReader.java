@@ -41,7 +41,8 @@ public class ExcelReader {
 						Cell c9 = s.getCell(9, i);
 						Cell c10 = s.getCell(10, i);
 
-						System.out.println(c.getContents() + " \t" + c1.getContents() + " \t" + c2.getContents() + " \t"
+						System.out.println(
+								   c.getContents() + " \t" + c1.getContents() + " \t" + c2.getContents() + " \t"
 								+ c3.getContents() + " \t" + c4.getContents() + " \t" + c5.getContents() + " \t"
 								+ c6.getContents() + " \t" + c7.getContents() + " \t" + c8.getContents() + " \t"
 								+ c9.getContents() + " \t" + c10.getContents());

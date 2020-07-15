@@ -34,16 +34,16 @@ public class MethodClass {
 
 		
 			tags += "<tr>";
-			tags += "<td>" + c.getContents() + " \\t\"</td>";
-			tags += "<td>" + c1.getContents() + " \t" + "</td>";
-			tags += "<td>" + c2.getContents() + " \t" + "</td>";
-			tags += "<td>" + c3.getContents() + " \t" + "</td>";
-			tags += "<td>" + c4.getContents() + " \t" + "</td>";
-			tags += "<td>" + c5.getContents() + " \t" + "</td>";
-			tags += "<td>" + c6.getContents() + " \t" + "</td>";
-			tags += "<td>" + c7.getContents() + " \t" + "</td>";
-			tags += "<td>" + c8.getContents() + " \t" + "</td>";
-			tags += "<td>" + c9.getContents() + " \t" + "</td>";
+			tags += "<td>" +   c.getContents() + " \t" + "</td>";
+			tags += "<td>" +  c1.getContents() + " \t" + "</td>";
+			tags += "<td>" +  c2.getContents() + " \t" + "</td>";
+			tags += "<td>" +  c3.getContents() + " \t" + "</td>";
+			tags += "<td>" +  c4.getContents() + " \t" + "</td>";
+			tags += "<td>" +  c5.getContents() + " \t" + "</td>";
+			tags += "<td>" +  c6.getContents() + " \t" + "</td>";
+			tags += "<td>" +  c7.getContents() + " \t" + "</td>";
+			tags += "<td>" +  c8.getContents() + " \t" + "</td>";
+			tags += "<td>" +  c9.getContents() + " \t" + "</td>";
 			tags += "<td>" + c10.getContents() + " \t" + "</td>";
 			tags += "</tr>";
 
