@@ -44,11 +44,20 @@ public class MainClass {
 			System.out.println(e.getMessage() + "<===");
 		} catch (SQLException e) {
 			System.out.println("executeQuery() ERR : " + e.getMessage());
+		} finally {
+			/** 5. DB 包访 按眉 棺 立加 秦力 **/
+			try {
+				ResultSet rs = stmt.executeQuery(query);
+				rs.close();
+				stmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				System.out.println("CLOSE ERR : " + e.getMessage());
+			}
 		}
 
 		/** 4. SQL 角青 搬苞 贸府 **/
 
-		/** 5. DB 包访 按眉 棺 立加 秦力 **/
 
 	} // main() END
 
