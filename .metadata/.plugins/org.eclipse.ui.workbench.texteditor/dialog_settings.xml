@@ -2,12 +2,16 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="tags+=" key="selection"/>
+		<item value="loanToKor" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="loanToKor"/>
+			<item value="ObjectClass"/>
+			<item value="maritalToKor"/>
+			<item value="= tags +"/>
 			<item value="fw.write("/>
 			<item value="initInsertBookData"/>
 			<item value="readNewsData"/>
@@ -19,12 +23,9 @@
 			<item value="temp"/>
 			<item value="nc"/>
 			<item value="dc"/>
-			<item value="[]="/>
-			<item value="("/>
-			<item value="length"/>
-			<item value=")"/>
 		</list>
 		<list key="replacehistory">
+			<item value="+="/>
 			<item value="tags+="/>
 			<item value="));"/>
 			<item value="(new NewsClass(&quot;"/>
@@ -39,14 +40,13 @@
 			<item value="stu[0]=new Student(&quot;"/>
 			<item value="dep[0]=new Department("/>
 			<item value="Department dep[0]= new Department("/>
-			<item value="size()"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="288" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="257" key="DIALOG_X_ORIGIN"/>
-		<item value="256" key="DIALOG_Y_ORIGIN"/>
+		<item value="1410" key="DIALOG_X_ORIGIN"/>
+		<item value="220" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

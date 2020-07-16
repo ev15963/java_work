@@ -17,26 +17,6 @@ public class MethodClass {
 	public MethodClass() {
 	}
 	
-	public static int fromConsole() {
-		//
-		Scanner scan = new Scanner(System.in);
-		System.out.println("읽어들일 엑셀파일명 입력 예) bank_data:");
-		String filename=scan.next();
-		
-		System.out.println("읽어들일 페이지번호 입력 (예, 1):");
-		int pageNo=scan.nextInt();
-		
-		uri= uri+filename+extension;
-		System.out.println(uri);
-		
-		pageNo=pageNo-1; //return 에서 +1
-		startIndex=pageNo*list+1;
-		
-		ExcelReader.readExcelFile(uri, startIndex, list);
-		uri=null;
-		return pageNo+1;
-	} //fromConsole() END
-	
 	public static String createTags() {
 		String tags="";
 
@@ -111,6 +91,28 @@ public class MethodClass {
 		
 		return tags;
 	}
+	
+	public static int fromConsole() {
+		//
+		Scanner scan = new Scanner(System.in);
+		System.out.println("읽어들일 엑셀파일명 입력 예) bank_data:");
+		String filename=scan.next();
+		
+		System.out.println("읽어들일 페이지번호 입력 (예, 1):");
+		int pageNo=scan.nextInt();
+		
+		uri= uri+filename+extension;
+		System.out.println(uri);
+		
+		pageNo=pageNo-1; //return 에서 +1
+		startIndex=pageNo*list+1;
+		
+		ExcelReader.readExcelFile(uri, startIndex, list);
+		uri=null;
+		return pageNo+1;
+	} //fromConsole() END
+	
+	
 
 	
 }

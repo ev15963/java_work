@@ -15,14 +15,11 @@
 <fullyQualifiedTypeName name="com.lsw.PrintClass"/>
 <fullyQualifiedTypeName name="java.sql.NClob"/>
 <fullyQualifiedTypeName name="java.awt.Image"/>
-<fullyQualifiedTypeName name="com.freeflux.MethodClass"/>
 <fullyQualifiedTypeName name="java.lang.Void"/>
 <fullyQualifiedTypeName name="com.lsw.NewsClass"/>
-<fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="jxl.write.WritableWorkbook"/>
 <fullyQualifiedTypeName name="jxl.write.WritableSheet"/>
 <fullyQualifiedTypeName name="java.awt.Label"/>
-<fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="jxl.write.biff.RowsExceededException"/>
 <fullyQualifiedTypeName name="jxl.write.WriteException"/>
 <fullyQualifiedTypeName name="jxl.write.Label"/>
@@ -32,10 +29,19 @@
 <fullyQualifiedTypeName name="com.lsw.DataClass"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.lang.invoke.MethodHandleInfo"/>
 <fullyQualifiedTypeName name="com.lsw.MethodClass"/>
 <fullyQualifiedTypeName name="com.lsw.xls.ExcelReader"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.concurrent.SynchronousQueue"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.freeflux.xls.ExcelReader"/>
+<fullyQualifiedTypeName name="com.freeflux.MethodClass"/>
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="com.lsw.CofffeeVendingMachineFrame"/>
+<fullyQualifiedTypeName name="java.awt.Graphics"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
 </qualifiedTypeNameHistroy>
