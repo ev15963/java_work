@@ -20,6 +20,7 @@ public class MainClass {
 
 		Statement stmt = null; // 3-1 SQL 실행 객체 얻기
 
+		ResultSet rs = null;
 		/** 3. SQL 실행 **/
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -33,7 +34,7 @@ public class MainClass {
 			stmt = conn.createStatement();// 3-1
 
 			// 3-3 객체의 메서드를 이용하여 query 실행
-			ResultSet rs = stmt.executeQuery(query);
+			rs = stmt.executeQuery(query);
 
 			while (rs.next()) { // rs.next();
 				System.out.print(rs.getInt("no"));
@@ -47,7 +48,6 @@ public class MainClass {
 		} finally {
 			/** 5. DB 관련 객체 및 접속 해제 **/
 			try {
-				ResultSet rs = stmt.executeQuery(query);
 				rs.close();
 				stmt.close();
 				conn.close();
