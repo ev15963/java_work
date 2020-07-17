@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="loanToKor" key="selection"/>
+		<item value="execute" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="execute"/>
 			<item value="loanToKor"/>
 			<item value="ObjectClass"/>
 			<item value="maritalToKor"/>
@@ -22,7 +23,6 @@
 			<item value="buffer"/>
 			<item value="temp"/>
 			<item value="nc"/>
-			<item value="dc"/>
 		</list>
 		<list key="replacehistory">
 			<item value="+="/>
