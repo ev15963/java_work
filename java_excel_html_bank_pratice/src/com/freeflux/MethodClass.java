@@ -9,6 +9,7 @@ public class MethodClass {
 	private static int list=10;
 	private static int pageNo=1;
 	private static int startIndex=0;
+	public static String uri="c://filetest/";
 	
 	public MethodClass() {
 	}
@@ -19,7 +20,7 @@ public class MethodClass {
 		String filename = sc.nextLine();
 		System.out.println("읽어들일 페이지:");
 		int pageNo = sc.nextInt();
-		String uri = "c:/filetest/" + filename + ".xls";
+		uri += (filename + ".xls");
 		System.out.println(uri);
 		
 		pageNo-=1;
@@ -34,6 +35,8 @@ public class MethodClass {
 	
 	public static String createTags() {
 		String tags="";
+		DataClass dc = new DataClass();
+//		dc.bank();
 		
 		tags+=("<!doctype html><html><head><title>Bank Data List</title></head>"
 				+ "<body><table border='1'><tr>");
@@ -42,7 +45,7 @@ public class MethodClass {
 				"연락방법", "가입월", "가입요일",	"기간"};
 
 		for(int i=0;i<11;i++) {
-			tags+=("<th>"+header+"</th>");
+			tags+=("<th>"+header[i]+"</th>");
 		}
 		tags+="</tr>";
 		

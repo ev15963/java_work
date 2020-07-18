@@ -28,6 +28,7 @@ public class ExcelMaker {
 			
 			for (int i=0;i<10;i++) {
 				Label label= new Label(0,i,"데이터=>"+i);
+				s1.addCell(label);
 				Label label1= new Label(1,i,"데이터=>"+i);
 				s1.addCell(label1); //???
 				

@@ -3,8 +3,8 @@ package com.freeflux;
 /** 조회된 한 행의 정보를 담는 클래스 **/
 public class ObjectClass {
 
-	private String no = "";
-	private String age = "";
+	private int no = 0;
+	private int age = 0;
 	private String job = "";
 	private String marital = "";
 	private String education = "";
@@ -24,8 +24,8 @@ public class ObjectClass {
 	public ObjectClass(String no, String age, String job, String marital, String education, String housing, String loan,
 			String contact, String month, String day_of_week, String duration) {
 
-		this.no = no;
-		this.age = age;
+		this.no = Integer.parseInt(no);
+		this.age = Integer.parseInt(age);
 		this.job = burnyuk(job);
 		this.marital = maritalToKor(marital);
 		this.education = educationToKor(education);
@@ -198,10 +198,10 @@ public class ObjectClass {
 //	private String day_of_week = "";
 //	private int duration = 0;
 	
-	public String getNo() {
+	public int getNo() {
 		return no;
 	}
-	public String getAge() {
+	public int getAge() {
 		return age;
 	}
 	public String getJob() {
