@@ -32,17 +32,42 @@ public class MethodClass {
 	} //fromConsole() END
 
 	
-//	public static String createTags() {
-//		String tags="";
-//		
-//		tags+=("<!doctype html><html><head><title>Bank Data List</title></head>"
-//				+ "<body><table border='1'><tr><th>");
-//		
-//		String[] header = {"번호", "나이", "직업", "결혼여부",	"학력", "집소유", "대출", 
-//				"연락방법", "가입월", "가입요일",	"기간"};
-//		
-//		return null;
-//	}
+	public static String createTags() {
+		String tags="";
+		
+		tags+=("<!doctype html><html><head><title>Bank Data List</title></head>"
+				+ "<body><table border='1'><tr>");
+		
+		String[] header = {"번호", "나이", "직업", "결혼여부",	"학력", "집소유", "대출", 
+				"연락방법", "가입월", "가입요일",	"기간"};
+
+		for(int i=0;i<11;i++) {
+			tags+=("<th>"+header+"</th>");
+		}
+		tags+="</tr>";
+		
+		for(ObjectClass o: DataClass.bank) {
+			tags+="<tr>";
+			tags+=("<td>"+o.getNo()+"</td>");
+			tags+=("<td>"+o.getAge()+"</td>");
+			tags+=("<td>"+o.getJob()+"</td>");
+			tags+=("<td>"+o.getMarial()+"</td>");
+			tags+=("<td>"+o.getEducation()+"</td>");
+			tags+=("<td>"+o.getHousing()+"</td>");
+			tags+=("<td>"+o.getLoan()+"</td>");
+			tags+=("<td>"+o.getContact()+"</td>");
+			tags+=("<td>"+o.getMonth()+"</td>");
+			tags+=("<td>"+o.getDay_of_week()+"</td>");
+			tags+=("<td>"+o.getDuration()+"</td>");
+
+			tags+="</tr>";
+		}
+
+		tags+="</table></body></html>";
+	
+		
+		return tags;
+	}
 	
 
 	
