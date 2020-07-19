@@ -11,9 +11,10 @@ public class MainClass {
 
 		String tags="";
 		DataClass dc = new DataClass();
-		for(int i =0; i<dc.bank.size(); i++) {
+		ObjectClass
+//		for(int i =0; i<dc.bank.size(); i++) {
 			tags+="<tr>";
-			tags+=("<td>"+dc.bank.get(i)+"</td>");
+			tags+=("<td>"+dc.bank.+"</td>");
 //			tags+=("<td>"+o.getAge()+"</td>");
 //			tags+=("<td>"+o.getJob()+"</td>");
 //			tags+=("<td>"+o.getMarial()+"</td>");
@@ -26,7 +27,7 @@ public class MainClass {
 //			tags+=("<td>"+o.getDuration()+"</td>");
 
 			tags+="</tr>";
-		}
+//		}
 		
 		System.out.println("tags"+tags);
 
