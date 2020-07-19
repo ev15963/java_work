@@ -10,19 +10,20 @@ public class MainClass {
 		PrintClass.makeHTML(htmlTags, pageNo);
 
 		String tags="";
-		for(ObjectClass o: DataClass.bank) {
+		DataClass dc = new DataClass();
+		for(int i =0; i<dc.bank.size(); i++) {
 			tags+="<tr>";
-			tags+=("<td>"+o.getNo()+"</td>");
-			tags+=("<td>"+o.getAge()+"</td>");
-			tags+=("<td>"+o.getJob()+"</td>");
-			tags+=("<td>"+o.getMarial()+"</td>");
-			tags+=("<td>"+o.getEducation()+"</td>");
-			tags+=("<td>"+o.getHousing()+"</td>");
-			tags+=("<td>"+o.getLoan()+"</td>");
-			tags+=("<td>"+o.getContact()+"</td>");
-			tags+=("<td>"+o.getMonth()+"</td>");
-			tags+=("<td>"+o.getDay_of_week()+"</td>");
-			tags+=("<td>"+o.getDuration()+"</td>");
+			tags+=("<td>"+dc.bank.get(i)+"</td>");
+//			tags+=("<td>"+o.getAge()+"</td>");
+//			tags+=("<td>"+o.getJob()+"</td>");
+//			tags+=("<td>"+o.getMarial()+"</td>");
+//			tags+=("<td>"+o.getEducation()+"</td>");
+//			tags+=("<td>"+o.getHousing()+"</td>");
+//			tags+=("<td>"+o.getLoan()+"</td>");
+//			tags+=("<td>"+o.getContact()+"</td>");
+//			tags+=("<td>"+o.getMonth()+"</td>");
+//			tags+=("<td>"+o.getDay_of_week()+"</td>");
+//			tags+=("<td>"+o.getDuration()+"</td>");
 
 			tags+="</tr>";
 		}
