@@ -140,4 +140,82 @@ public class DataBaseClass {
 			}
 		}	//finally END
 	} //duplicate() END
+
+	/** 5. 입력받은  id와 pw를 테이블에 추가(삽입) 하는 메서드 선언**/
+	public void insertTable(String id, String pw) {
+		//1.query 선언
+		String query="insert into member (id, pw) values (?,?)";
+		
+		try {
+			this.pstmt=this.conn.prepareStatement(query);
+			this.pstmt.setString(1, id);
+			this.pstmt.setString(2, pw);
+			this.r=this.pstmt.executeUpdate();
+			if(r>0) {
+				System.out.println("성공적으로 삽입 되었습니다.");
+			} 
+		} catch (SQLException e) {
+			System.out.println("insertTable() ERR:"+e.getMessage());
+		} finally {
+			try {
+				this.pstmt.close();
+			} catch (SQLException e) {
+				System.out.println("insertTable() CLOSE ERR: "+e.getMessage());
+			}
+		}
+	}
+
+	/** 6. no 필드값을 이용하여 id, pw 필드의 값을 수정하는 메서드 선언 **/
+	public void updateTable(String id, String pw, int no) {
+		// 1. query 선언						대입				같다
+		String query="update member set id=?, pw=? where no=?";
+		
+		try {
+			this.pstmt=this.conn.prepareStatement(query);
+			this.pstmt.setString(1, id);
+			this.pstmt.setString(2, pw);
+			this.pstmt.setInt(3, no);
+			this.r=this.pstmt.executeUpdate();
+			
+			if(r>0) {
+				System.out.println("수정 성공!!!");
+			} else {
+				System.out.println("수정 실패!!!");
+			}
+		} catch (SQLException e) {
+			System.out.println("updateTable() ERR:"+e.getMessage());
+		} finally {
+			try {
+				this.pstmt.close();
+			} catch (SQLException e) {
+				System.out.println("updateTable CLOSE ERR");
+			}
+		} //finally END
+		
+	}
+
+	/** 7. no 필드값을 이용하여 레코드를 삭제하는 메서드 선언 **/
+	public void deleteRecord(int no) {
+		//1. query 선언
+		String query = "delete from member where no=?";
+		
+		try {
+			this.pstmt=this.conn.prepareStatement(query);
+			this.pstmt.setInt(1, no);
+			this.r=this.pstmt.executeUpdate();
+			if(this.r>0) {
+				System.out.println("삭제성공");
+			} else {
+				System.out.println("삭제실패!!");
+			}
+		} catch (SQLException e) {
+			System.out.println("deleteRecord ERR : "+e.getMessage());
+		} finally {
+			try {
+				this.pstmt.close();
+			} catch (SQLException e) {
+				System.out.println("deleteRecord() CLOSE ERR :"+e.getMessage());				
+			}
+		}
+	}
 }

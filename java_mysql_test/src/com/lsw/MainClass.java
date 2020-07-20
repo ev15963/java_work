@@ -17,10 +17,13 @@ public class MainClass {
 		
 		DataBaseClass dbc = new DataBaseClass("navercafe");
 		dbc.connect_navercafe();
-		dbc.selectAll();
 		
 		dbc.duplicateID("aaa");
 		dbc.duplicateID("vvv");
+		dbc.insertTable("ssss", "12345");
+		dbc.updateTable("zzzz", "4444", 5);
+		dbc.deleteRecord(10);
+		dbc.selectAll();
 //		/** 1. JDBC Driver Load **/
 //		/** 2. mySQL Server Connect **/
 ////		Connection conn = null; // 외부에 선언
