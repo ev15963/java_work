@@ -13,8 +13,8 @@ public class MainClass {
 		DataClass dc = new DataClass();
 		ObjectClass
 //		for(int i =0; i<dc.bank.size(); i++) {
-			tags+="<tr>";
-			tags+=("<td>"+dc.bank.+"</td>");
+//			tags+="<tr>";
+//			tags+=("<td>"+dc.bank.+"</td>");
 //			tags+=("<td>"+o.getAge()+"</td>");
 //			tags+=("<td>"+o.getJob()+"</td>");
 //			tags+=("<td>"+o.getMarial()+"</td>");
@@ -26,10 +26,10 @@ public class MainClass {
 //			tags+=("<td>"+o.getDay_of_week()+"</td>");
 //			tags+=("<td>"+o.getDuration()+"</td>");
 
-			tags+="</tr>";
+//			tags+="</tr>";
 //		}
 		
-		System.out.println("tags"+tags);
+//		System.out.println("tags"+tags);
 
 		
 	}
