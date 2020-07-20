@@ -162,7 +162,7 @@ public class DataBaseClass {
 	/** 6. no 필드값을 이용하여 id, pw 필드의 값을 수정하는 메서드 선언 **/
 	public void updateTable(String id, String pw, int no) {
 		// 1. query 선언						대입				같다
-		
+		String query = "update member set id=?, pw=? where no=?";
 		
 	}
 
