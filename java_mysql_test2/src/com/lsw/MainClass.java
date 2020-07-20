@@ -8,6 +8,9 @@ import java.sql.*;
 //import java.sql.Statement;
 
 import com.lsw.db.DataBaseClass;
+import com.lsw.obj.DataClass;
+import com.lsw.outside.PrintClass;
+import com.lsw.util.MethodClass;
 
 //import javax.naming.spi.DirStateFactory.Result;
 
@@ -17,17 +20,23 @@ public class MainClass {
 		
 		DataBaseClass dbc = new DataBaseClass("navercafe");
 		dbc.connect_navercafe();
-		
-		dbc.duplicateID("aaa");
-		dbc.duplicateID("vvv");
-		dbc.insertTable("ssss", "12345");
-		dbc.updateTable("zzzz", "4444", 5);
-		dbc.deleteRecord(10);
 		dbc.selectAll();
+		System.out.println(DataClass.members.size());
+		System.out.println(DataClass.members.get(0).getPw());
 		
-		dbc.userClose();
-		
-		dbc.selectAll();
+		String tags =MethodClass.makeTags();
+		System.out.println(tags);
+		PrintClass.createHTML(tags);
+//		dbc.duplicateID("aaa");
+//		dbc.duplicateID("vvv");
+//		dbc.insertTable("ssss", "12345");
+//		dbc.updateTable("zzzz", "4444", 5);
+//		dbc.deleteRecord(10);
+//		dbc.selectAll();
+//		
+//		dbc.userClose();
+//		
+//		dbc.selectAll();
 //		/** 1. JDBC Driver Load **/
 //		/** 2. mySQL Server Connect **/
 ////		Connection conn = null; // 외부에 선언

@@ -9,14 +9,14 @@ public class MethodClass {
 	private static int list=10;
 	private static int pageNo=1;
 	private static int startIndex=0;
-	public static String uri="c://filetest/";
+	public static String uri="c:/filetest/";
 	
 	public MethodClass() {
 	}
 	
 	public static int fromConsole() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("읽어들일 파일 book-data");
+		System.out.println("읽어들일 파일 bank_data");
 		String filename = sc.nextLine();
 		System.out.println("읽어들일 페이지:");
 		int pageNo = sc.nextInt();

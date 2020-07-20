@@ -4,14 +4,15 @@ public class MainClass {
 
 	public static void main(String[] args) { //fromconsole createtags makehtml
 		int pageNo= MethodClass.fromConsole();
-		String htmlTags=MethodClass.createTags();
-		System.out.println(htmlTags);
-		
-		PrintClass.makeHTML(htmlTags, pageNo);
-
-		String tags="";
-		DataClass dc = new DataClass();
-		ObjectClass
+		System.out.println(pageNo);
+//		String htmlTags=MethodClass.createTags();
+//		System.out.println(htmlTags);
+//		
+//		PrintClass.makeHTML(htmlTags, pageNo);
+//
+//		String tags="";
+//		DataClass dc = new DataClass();
+//		ObjectClass
 //		for(int i =0; i<dc.bank.size(); i++) {
 //			tags+="<tr>";
 //			tags+=("<td>"+dc.bank.+"</td>");

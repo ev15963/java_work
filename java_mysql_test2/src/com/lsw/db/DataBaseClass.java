@@ -7,6 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import com.lsw.obj.DataClass;
+import com.lsw.obj.ObjectClass;
+
 public class DataBaseClass {
 	/** database 관련 상수 선언 **/
 	// 1. mySQL 드라이버 이름
@@ -69,11 +72,15 @@ public class DataBaseClass {
 			// 3. query 실행
 			this.rs = this.stmt.executeQuery(query);
 
-			// 4. ResultSet 객체 내부 데이터 조회
+			// 4. ResultSet 객체 내부 데이터를 ArrayList에 객체로  추가
+			ObjectClass oc =null;
 			while (rs.next()) {
-				System.out.print(rs.getInt(1) + "_");
-				System.out.print(rs.getString(2) + "_");
-				System.out.println(rs.getString(3));
+				oc=new ObjectClass(rs.getInt(1),rs.getString(2),rs.getString(3));
+				DataClass.members.add(oc);
+				oc=null; //혹시모를 오류를 위해 초기화
+//				System.out.print(rs.getInt(1) + "_");
+//				System.out.print(rs.getString(2) + "_");
+//				System.out.println(rs.getString(3));
 			} // while() END
 
 		} catch (SQLException e) {

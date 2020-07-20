@@ -35,7 +35,7 @@ public class ObjectClass {
 		this.month = monthToKor(month);
 		this.day_of_week = day_of_weekToKor(day_of_week);
 		this.duration = Integer.parseInt(duration);
-
+System.out.println("testtesttesttesttesttesttest");
 	}
 
 	/**
