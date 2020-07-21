@@ -65,7 +65,11 @@ public class DataBaseClass {
 	
 	/**조회 메서드 (전체 조회 : select * from 테이블명) **/
 	public void selectAll(String table_name) {
-		String query="select sum(sale), avg(sale) from "+table_name+" order by seq_no desc limit 0,5";
+		//86970: 1000 : 100 where X
+		//84370: 1000 : 250 where sale>200
+		String query="select sum(sale*13), max(sale), min(sale) from "
+					+table_name +" where sale>200";
+		
 		
 		try {
 			this.stmt=this.conn.createStatement();
@@ -79,7 +83,8 @@ public class DataBaseClass {
 //			}
 			this.rs.next();
 			System.out.print(rs.getInt(1)+" : ");
-			System.out.print(rs.getInt(2));
+			System.out.print(rs.getInt(2)+" : ");
+			System.out.print(rs.getInt(3));
 		} catch (SQLException e) {
 			System.out.println("selectAll() ERR:"+e.getMessage());
 		}
@@ -123,6 +128,34 @@ public class DataBaseClass {
 			
 		} catch (SQLException e) {
 			System.out.println("insertRecord err:"+e.getMessage());
+		}
+	}
+	
+	/**검색어를 이용한 검색 메서드 선언 **/
+	//where empName like '%이%'를 아래와 같이 변경해야 가능
+	//where empName like CONCAT('%', ?, '%')
+	//참고 : CONCAT은 concatenate(연결, 잇다. 연쇄..)의 약자
+	
+	public void searchWord(String table_name) {
+		String query = "select empName, job from ";
+		query+=table_name;
+		query+=" where empName like CONCAT('%', ?,'%')";
+		
+		try {
+		this.pstmt=this.conn.prepareStatement(query);
+		this.pstmt.setString(1, ChangeEncoding.toLatin("이"));
+		this.rs=this.pstmt.executeQuery();
+		
+		while(rs.next()) {
+			String temp="";
+			temp=rs.getString(1);
+			System.out.println(ChangeEncoding.toUnicode(temp+" : "));
+			temp=rs.getString(2);
+			System.out.println(ChangeEncoding.toUnicode(temp));
+		}
+		
+		}catch(SQLException e) {
+			System.out.println("searchWord() err : "+e.getMessage());
 		}
 	}
 	
