@@ -65,7 +65,7 @@ public class DataBaseClass {
 	
 	/**조회 메서드 (전체 조회 : select * from 테이블명) **/
 	public void selectAll(String table_name) {
-		String query="select * from "+table_name;
+		String query="select * from "+table_name+" order by seq_no desc limit 0,5";
 		
 		try {
 			this.stmt=this.conn.createStatement();
