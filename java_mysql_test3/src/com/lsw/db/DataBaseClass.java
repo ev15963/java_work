@@ -169,7 +169,19 @@ public class DataBaseClass {
 	/** 7. no 필드값을 이용하여 레코드를 삭제하는 메서드 선언 **/
 	public void deleteRecord(int no) {
 		//1. query 선언
+		String query = "delete from company where no=?";
 		
+		try {
+			this.pstmt=this.conn.prepareStatement(query);
+		} catch (SQLException e) {
+			System.out.println("delete err"+e.getMessage());
+		} finally {
+			try {
+				pstmt.close();
+			} catch (SQLException e) {
+				System.out.println("deleteclose err"+e.getMessage());
+			}
+		}
 	}
 
 	/** 각 자원들을 해제하는 메서드 Overloading **/
