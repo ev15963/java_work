@@ -75,11 +75,53 @@ public class DataBaseClass {
 			while(rs.next()) {
 //				System.out.println(rs.getString("empName"));
 				String name=rs.getString("empName");
-				System.out.println(ChangeEncoding.toUnicode(name));
+				System.out.println(ChangeEncoding.toUnicode(name)); //인코딩
 			}
 		} catch (SQLException e) {
 			System.out.println("selectAll() ERR:"+e.getMessage());
 		}
 		
 	}
+	
+	/**테이블에 데이터추가 (삽입)하는메소드 **/
+//	insert into employee (empNo, empName, job, mgr)
+//							hireDate, sale, commission, detNo)
+//	values(1001, "김사랑", "사원", 13, "2007-03-01", 300, 0, 20);
+//			?		?	   ?    ?       ?			? ?   ?
+	public void insertRecord() {
+		String query="insert into employee ";
+		query+="(empNo, empName, job, mgr, hireDate, sale, commission, deptNo)";
+		query+=" values (?,?,?,?,?,?,?,?)";	// 필드의 갯수 만큼 ? 필요
+		//empNo는 primary key 이기 때문에 중복업시 추가될 수 없다.
+		try {
+			//prepareStatement()는 객체생성시, query문을 먼저 전달해야한다.
+			this.pstmt=this.conn.prepareStatement(query);
+			//query문 내부에 ? 가 있을경우
+			//반드시 ?에 해당항하는 값을 설정!!!
+			//여러 개의 ?가 있을경우 ?는 1부터 지정
+			//?의 갯수보다 많은 값 또는 적은 값을 설정할 경우 오류발생!!!
+			//또한 해당 필드와 타입이 맞이 않을 경우에도 오류발생!!
+			this.pstmt.setInt(1, 1015);
+			this.pstmt.setString(2, ChangeEncoding.toLatin("강기훈"));
+			this.pstmt.setString(3, ChangeEncoding.toLatin("강사"));
+			this.pstmt.setInt(4, 12);
+			this.pstmt.setString(5, "2020-07-21");
+			this.pstmt.setInt(6, 100);
+			this.pstmt.setInt(7, 0);
+			this.pstmt.setInt(8, 20);
+			
+			this.result=this.pstmt.executeUpdate();
+			//객체 생성시 미리 query문을 전달했기 때문에
+			//실행시 query문 전달하지 않음!!
+			//executeUpdate()는 실행후 결과 값을 정수로 반환
+			//실행한 내용이 없을 경우에는 0을 반환..
+			//결과 값을 이용하면 실행 여부를 확인할 수 없음
+			System.out.println(this.result+"개가 추가되었습니다.");
+			
+		} catch (SQLException e) {
+			System.out.println("insertRecord err:"+e.getMessage());
+		}
+	}
+	
+	
 }
