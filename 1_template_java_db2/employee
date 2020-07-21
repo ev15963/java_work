@@ -1,0 +1,235 @@
+mysql> create table employee(
+    -> empNo int auto_increment primary key,
+    -> empName varchar(20) not null,
+    -> job varchar(20) not null,
+    -> mgr varchar(20) not null,
+    -> hireDate varchar(20) not null,
+    -> sale int,
+    -> commission int,
+    -> deptNo int
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> select * from employee;
+Empty set (0.00 sec)
+
+mysql> insert into employee (empNo, empName, job, mgr, hireDate, sale, commission, deptNo) values (1001, '김사랑', '사원', '13', '2007-03-01', 300, 0, 40);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into employee (empNo, empName, job, mgr, hireDate, sale, commission, deptNo) values (1002, '한예슬', '대리', '05', '2007-04-02', 250,   80, 20);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee (empNo, empName, job, mgr, hireDate, sale, commission, deptNo) values (1003, '오지호', '과장', '05', '2005-02-10', 500,  100, 30);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee (empNo, empName, job, mgr, hireDate, sale, commission, deptNo) values (1004, '이병헌', '부장', '08', '2003-09-02', 600, 0, 40);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee (empNo, empName, job, mgr, hireDate, sale, commission, deptNo) values (1005, '신동엽', '과장', '05', '2005-04-07', 450,  200, 30);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee (empNo, empName, job, mgr, hireDate, sale, commission, deptNo) values (1006, '장동건', '부장', '08', '2003-10-09', 480, 0, 20);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee (empNo, empName, job, mgr, hireDate, sale, commission, deptNo) values (1007, '이문세', '부장', '08', '2004-01-08', 520, 0, 40);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into employee (empNo, empName, job, mgr, hireDate, sale, commission, deptNo) values (1008, '감우성', '차장', '03', '2004-03-08', 500,    0, 30);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee (empNo, empName, job, mgr, hireDate, sale, commission, deptNo) values (1009, '안성기', '사장', '', '1996-10-04',1000, 0, 20);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee (empNo, empName, job, mgr, hireDate, sale, commission, deptNo) values (1010, '이병헌', '과장', '03', '2005-04-07', 500, 0, 20);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee (empNo, empName, job, mgr, hireDate, sale, commission, deptNo) values (1011, '조향기', '사원', '07', '2007-03-01', 280, 0, 30);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into employee (empNo, empName, job, mgr, hireDate, sale, commission, deptNo) values (1012, '강혜정', '사원', '06', '2007-08-09', 300, 0, 20);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee (empNo, empName, job, mgr, hireDate, sale, commission, deptNo) values (1013, '박중훈', '부장', '03', '2002-10-09', 560, 0, 40);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into employee (empNo, empName, job, mgr, hireDate, sale, commission, deptNo) values (1014, '조인성', '사원', '06', '2007-11-09', 250, 0, 30);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> desc employee;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| empNo      | int(11)     | NO   | PRI | NULL    | auto_increment |
+| empName    | varchar(20) | NO   |     | NULL    |                |
+| job        | varchar(20) | NO   |     | NULL    |                |
+| mgr        | varchar(20) | NO   |     | NULL    |                |
+| hireDate   | varchar(20) | NO   |     | NULL    |                |
+| sale       | int(11)     | YES  |     | NULL    |                |
+| commission | int(11)     | YES  |     | NULL    |                |
+| deptNo     | int(11)     | YES  |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+8 rows in set (0.01 sec)
+
+mysql> select * from employee;
++-------+---------+------+-----+------------+------+------------+--------+
+| empNo | empName | job  | mgr | hireDate   | sale | commission | deptNo |
++-------+---------+------+-----+------------+------+------------+--------+
+|  1001 | 김사랑  | 사원 | 13  | 2007-03-01 |  300 |          0 |     40 |
+|  1002 | 한예슬  | 대리 | 05  | 2007-04-02 |  250 |         80 |     20 |
+|  1003 | 오지호  | 과장 | 05  | 2005-02-10 |  500 |        100 |     30 |
+|  1004 | 이병헌  | 부장 | 08  | 2003-09-02 |  600 |          0 |     40 |
+|  1005 | 신동엽  | 과장 | 05  | 2005-04-07 |  450 |        200 |     30 |
+|  1006 | 장동건  | 부장 | 08  | 2003-10-09 |  480 |          0 |     20 |
+|  1007 | 이문세  | 부장 | 08  | 2004-01-08 |  520 |          0 |     40 |
+|  1008 | 감우성  | 차장 | 03  | 2004-03-08 |  500 |          0 |     30 |
+|  1009 | 안성기  | 사장 |     | 1996-10-04 | 1000 |          0 |     20 |
+|  1010 | 이병헌  | 과장 | 03  | 2005-04-07 |  500 |          0 |     20 |
+|  1011 | 조향기  | 사원 | 07  | 2007-03-01 |  280 |          0 |     30 |
+|  1012 | 강혜정  | 사원 | 06  | 2007-08-09 |  300 |          0 |     20 |
+|  1013 | 박중훈  | 부장 | 03  | 2002-10-09 |  560 |          0 |     40 |
+|  1014 | 조인성  | 사원 | 06  | 2007-11-09 |  250 |          0 |     30 |
++-------+---------+------+-----+------------+------+------------+--------+
+14 rows in set (0.00 sec)
+
+q1. 사원의 이름과 급여와 입사일자만을 출력하기
+mysql> select empName, sale from employee;
++---------+------+
+| empName | sale |
++---------+------+
+| 김사랑  |  300 |
+| 한예슬  |  250 |
+| 오지호  |  500 |
+| 이병헌  |  600 |
+| 신동엽  |  450 |
+| 장동건  |  480 |
+| 이문세  |  520 |
+| 감우성  |  500 |
+| 안성기  | 1000 |
+| 이병헌  |  500 |
+| 조향기  |  280 |
+| 강혜정  |  300 |
+| 박중훈  |  560 |
+| 조인성  |  250 |
++---------+------+
+14 rows in set (0.00 sec)
+
+q2. 직급이 중복되지 않고 한 번씩 나열하기
+mysql> select distinct job from employee;
++------+
+| job  |
++------+
+| 사원 |
+| 대리 |
+| 과장 |
+| 부장 |
+| 차장 |
+| 사장 |
++------+
+6 rows in set (0.00 sec)
+
+q3. 급여가 300 이하인 사원의 사원번호, 사원 이름, 급여를 출력하기
+mysql> select empNo, empName, sale from employee where sale<=300;
++-------+---------+------+
+| empNo | empName | sale |
++-------+---------+------+
+|  1001 | 김사랑  |  300 |
+|  1002 | 한예슬  |  250 |
+|  1011 | 조향기  |  280 |
+|  1012 | 강혜정  |  300 |
+|  1014 | 조인성  |  250 |
++-------+---------+------+
+5 rows in set (0.00 sec)
+
+q4. 이름이 “오지호”인 사원의 사원번호, 사원명, 급여를 출력하기
+mysql> select empNo, empName, sale from employee where empName like '오지호';
++-------+---------+------+
+| empNo | empName | sale |
++-------+---------+------+
+|  1003 | 오지호  |  500 |
++-------+---------+------+
+1 row in set (0.00 sec)
+
+q5. 급여가 250, 300, 500인 사원들의 사원 번호와 사원명과 급여를 검색하기
+mysql> select empNo, empName from employee where sale=250 or sale=300 or sale=500;
++-------+---------+
+| empNo | empName |
++-------+---------+
+|  1001 | 김사랑  |
+|  1002 | 한예슬  |
+|  1003 | 오지호  |
+|  1008 | 감우성  |
+|  1010 | 이병헌  |
+|  1012 | 강혜정  |
+|  1014 | 조인성  |
++-------+---------+
+7 rows in set (0.00 sec)
+
+q6. 급여가 250, 300, 500이 아닌 사원들을 검색하기
+mysql> select empNo, empName from employee where sale!=250 and sale!=300 and sale!=500;
++-------+---------+
+| empNo | empName |
++-------+---------+
+|  1004 | 이병헌  |
+|  1005 | 신동엽  |
+|  1006 | 장동건  |
+|  1007 | 이문세  |
+|  1009 | 안성기  |
+|  1011 | 조향기  |
+|  1013 | 박중훈  |
++-------+---------+
+7 rows in set (0.00 sec)
+
+q7. LIKE를 사용하여 사원들 중에서 이름이 “김”으로 시작하는 사람과 이름 중에 “기”를 포함하는 사원의 사원번호와 사원이름을 출력
+mysql> select empNo, empName from employee where empName like '김%' or empName like '%기%';
++-------+---------+
+| empNo | empName |
++-------+---------+
+|  1001 | 김사랑  |
+|  1009 | 안성기  |
+|  1011 | 조향기  |
++-------+---------+
+3 rows in set (0.00 sec)
+
+q8. 사원 테이블에서 최근 입사한 직원 순으로 사원번호, 사원명, 직급, 입사일 컬럼만 출력하기
+mysql> select empNo, empName, job, hireDate from employee order by hireDate desc;
++-------+---------+------+------------+
+| empNo | empName | job  | hireDate   |
++-------+---------+------+------------+
+|  1014 | 조인성  | 사원 | 2007-11-09 |
+|  1012 | 강혜정  | 사원 | 2007-08-09 |
+|  1002 | 한예슬  | 대리 | 2007-04-02 |
+|  1011 | 조향기  | 사원 | 2007-03-01 |
+|  1001 | 김사랑  | 사원 | 2007-03-01 |
+|  1005 | 신동엽  | 과장 | 2005-04-07 |
+|  1010 | 이병헌  | 과장 | 2005-04-07 |
+|  1003 | 오지호  | 과장 | 2005-02-10 |
+|  1008 | 감우성  | 차장 | 2004-03-08 |
+|  1007 | 이문세  | 부장 | 2004-01-08 |
+|  1006 | 장동건  | 부장 | 2003-10-09 |
+|  1004 | 이병헌  | 부장 | 2003-09-02 |
+|  1013 | 박중훈  | 부장 | 2002-10-09 |
+|  1009 | 안성기  | 사장 | 1996-10-04 |
++-------+---------+------+------------+
+14 rows in set (0.00 sec)
+
+q9. 부서 번호가 빠른 사원부터 출력하되 같은 부서내의 사원을 출력할 경우, 입사한지 가장 오래된 사원부터 출력하기
+mysql> select * from employee order by deptNo asc, hireDate asc;
++-------+---------+------+-----+------------+------+------------+--------+
+| empNo | empName | job  | mgr | hireDate   | sale | commission | deptNo |
++-------+---------+------+-----+------------+------+------------+--------+
+|  1009 | 안성기  | 사장 |     | 1996-10-04 | 1000 |          0 |     20 |
+|  1006 | 장동건  | 부장 | 08  | 2003-10-09 |  480 |          0 |     20 |
+|  1010 | 이병헌  | 과장 | 03  | 2005-04-07 |  500 |          0 |     20 |
+|  1002 | 한예슬  | 대리 | 05  | 2007-04-02 |  250 |         80 |     20 |
+|  1012 | 강혜정  | 사원 | 06  | 2007-08-09 |  300 |          0 |     20 |
+|  1008 | 감우성  | 차장 | 03  | 2004-03-08 |  500 |          0 |     30 |
+|  1003 | 오지호  | 과장 | 05  | 2005-02-10 |  500 |        100 |     30 |
+|  1005 | 신동엽  | 과장 | 05  | 2005-04-07 |  450 |        200 |     30 |
+|  1011 | 조향기  | 사원 | 07  | 2007-03-01 |  280 |          0 |     30 |
+|  1014 | 조인성  | 사원 | 06  | 2007-11-09 |  250 |          0 |     30 |
+|  1013 | 박중훈  | 부장 | 03  | 2002-10-09 |  560 |          0 |     40 |
+|  1004 | 이병헌  | 부장 | 08  | 2003-09-02 |  600 |          0 |     40 |
+|  1007 | 이문세  | 부장 | 08  | 2004-01-08 |  520 |          0 |     40 |
+|  1001 | 김사랑  | 사원 | 13  | 2007-03-01 |  300 |          0 |     40 |
++-------+---------+------+-----+------------+------+------------+--------+
+14 rows in set (0.00 sec)

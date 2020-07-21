@@ -151,7 +151,7 @@ public class DataBaseClass {
 			temp=rs.getString(1);
 			System.out.println(ChangeEncoding.toUnicode(temp+" : "));
 			temp=rs.getString(2);
-			System.out.println(ChangeEncoding.toUnicode(temp));
+			System.out.print(ChangeEncoding.toUnicode(temp));
 		}
 		
 		}catch(SQLException e) {

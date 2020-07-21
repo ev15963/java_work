@@ -3441,3 +3441,6 @@ Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find
 
 !ENTRY org.eclipse.jdt.launching 4 124 2020-07-21 11:02:39.810
 !MESSAGE Launch configuration Demo references closed project java_mysql_test3
+
+!ENTRY org.eclipse.jdt.launching 4 124 2020-07-21 15:34:44.780
+!MESSAGE Launch configuration Demo references closed project java_mysql_test3
