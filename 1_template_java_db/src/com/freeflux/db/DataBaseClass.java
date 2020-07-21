@@ -65,18 +65,21 @@ public class DataBaseClass {
 	
 	/**조회 메서드 (전체 조회 : select * from 테이블명) **/
 	public void selectAll(String table_name) {
-		String query="select * from "+table_name+" order by seq_no desc limit 0,5";
+		String query="select sum(sale), avg(sale) from "+table_name+" order by seq_no desc limit 0,5";
 		
 		try {
 			this.stmt=this.conn.createStatement();
 			//createStatement()는 객체 생성시, query문을 갖지 못함!!!
 			this.rs=this.stmt.executeQuery(query);
 			//실제 query 실행요청 시, 실행할 query문을 mySQL에 전달!!!
-			while(rs.next()) {
+//			while(rs.next()) {
 //				System.out.println(rs.getString("empName"));
-				String name=rs.getString("empName");
-				System.out.println(ChangeEncoding.toUnicode(name)); //인코딩
-			}
+//				String name=rs.getString("empName");
+//				System.out.println(ChangeEncoding.toUnicode(name)); //인코딩
+//			}
+			this.rs.next();
+			System.out.print(rs.getInt(1)+" : ");
+			System.out.print(rs.getInt(2));
 		} catch (SQLException e) {
 			System.out.println("selectAll() ERR:"+e.getMessage());
 		}
