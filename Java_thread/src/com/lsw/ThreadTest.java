@@ -3,6 +3,14 @@ package com.lsw;
 public class ThreadTest {
 
 	public static void main(String[] args) {
+		System.out.println("main() 시작");
+		MyThread mt1 = new MyThread();
+		mt1.start();
+		MyThread mt2 = new MyThread();
+		mt2.start();
+		MyThread mt3 = new MyThread();
+		mt3.start();
+		System.out.println("main() 종료");
 		//사용방법 1.
 		//Thread를 상속 받고, run() { } 내부를 재정의
 		//객체생성
