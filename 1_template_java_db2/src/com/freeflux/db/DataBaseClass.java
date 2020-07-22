@@ -58,9 +58,12 @@ public class DataBaseClass {
 			// db명이 없어도 접속에 성공할 수 있기 때문에 오류 발생안함
 			// 단, db명이 있을 경우 , 즉, 잘못입력했을 경우에는 오류발생!!
 		} catch (ClassNotFoundException e) {
-			System.out.println("DRIVER ERR:" + e.getMessage());
+			System.out.println("con ERR:" + e.getMessage());
 		}
 	}
+	
+	
+	
 
 	/** 조회 메서드 (전체 조회 : select * from 테이블명) **/
 
@@ -73,15 +76,18 @@ public class DataBaseClass {
 			// createStatement()는 객체 생성시, query문을 갖지 못함!!!
 			this.rs = this.stmt.executeQuery(query);
 			// 실제 query 실행요청 시, 실행할 query문을 mySQL에 전달!!!
-			while (rs.next()) {
-				// System.out.println(rs.getString("empName"));
-				String name = rs.getString("empName");
-				String unit1 = ChangeEncoding.toUnicode(name); // 인코딩
-				String unit2 = rs.getString("sale");
-				System.out.println(unit1 + " : " + unit2);
-			}
+//			while (rs.next()) {
+//				// System.out.println(rs.getString("empName"));
+//				String name = rs.getString("empName");
+//				String unit1 = ChangeEncoding.toUnicode(name); // 인코딩
+//				String unit2 = rs.getString("sale");
+//				System.out.println(unit1 + " : " + unit2);
+//			}
+			
 			// this.rs.next();
 			// System.out.println();
+			
+			String[] fN=this.getf
 		} catch (SQLException e) {
 			System.out.println("select_empName_sale err: " + e.getMessage());
 		} finally {
