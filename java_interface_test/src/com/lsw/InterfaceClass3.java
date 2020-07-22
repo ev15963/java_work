@@ -4,7 +4,7 @@ package com.lsw;
 //interface 끼리는 한반에 다중상속 가능
 //일반 클래스는  interface를 구현(implements)받을 수 있다.
 //일반 클래스는 interface들을 한번에 여러개 구현 받을 수 있다.
-public interface InterfaceClass { //오로지 각 기능에 대한 메서드명만 선언
+public interface InterfaceClass3 {
 	//상수만 선언 가능
 	int A=100;		// static final int A=100;
 	
