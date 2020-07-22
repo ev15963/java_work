@@ -4,18 +4,24 @@ public class ThreadTest {
 
 	public static void main(String[] args) {
 		System.out.println("main() 시작");
+		
+		SleepThread st = new SleepThread();
+		st.start();
+		
 //		RunnableClass rc = new RunnableClass();
 //		Thread t=new Thread(rc);
 //		t.start();
-		ThreadName1 mt1 = new ThreadName1("A");
-		mt1.setName("aaaa");
-		mt1.start();
-		ThreadName1 mt2 = new ThreadName1("B");
-		mt2.setName("bbbb");
-		mt2.start();
-		ThreadName1 mt3 = new ThreadName1("C");
-		mt3.setName("cccc");
-		mt3.start();
+		
+//		ThreadName1 mt1 = new ThreadName1("A");
+//		mt1.setName("aaaa");
+//		mt1.start();
+//		ThreadName1 mt2 = new ThreadName1("B");
+//		mt2.setName("bbbb");
+//		mt2.start();
+//		ThreadName1 mt3 = new ThreadName1("C");
+//		mt3.setName("cccc");
+//		mt3.start();
+		
 		System.out.println("main() 종료");
 		//사용방법 1.
 		//Thread를 상속 받고, run() { } 내부를 재정의
