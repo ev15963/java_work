@@ -8,7 +8,7 @@ public abstract class AbstractClass {
 	public AbstractClass() {
 	}
 	//일반메서드 선언 가능
-	public void sum() {
+	public void max() {
 		System.out.println("테스트");
 	}
 	//추상메서드 선언 가능(메서드명만 선언)
