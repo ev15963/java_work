@@ -4,15 +4,18 @@ public class ThreadTest {
 
 	public static void main(String[] args) {
 		System.out.println("main() 시작");
-		RunnableClass rc = new RunnableClass();
-		Thread t=new Thread(rc);
-		t.start();
-//		FakeThread mt1 = new FakeThread("A");
-//		mt1.start();
-//		FakeThread mt2 = new FakeThread("B");
-//		mt2.start();
-//		FakeThread mt3 = new FakeThread("C");
-//		mt3.start();
+//		RunnableClass rc = new RunnableClass();
+//		Thread t=new Thread(rc);
+//		t.start();
+		ThreadName1 mt1 = new ThreadName1("A");
+		mt1.setName("aaaa");
+		mt1.start();
+		ThreadName1 mt2 = new ThreadName1("B");
+		mt2.setName("bbbb");
+		mt2.start();
+		ThreadName1 mt3 = new ThreadName1("C");
+		mt3.setName("cccc");
+		mt3.start();
 		System.out.println("main() 종료");
 		//사용방법 1.
 		//Thread를 상속 받고, run() { } 내부를 재정의
