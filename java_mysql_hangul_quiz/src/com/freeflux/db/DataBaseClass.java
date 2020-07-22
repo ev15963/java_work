@@ -116,10 +116,10 @@ public class DataBaseClass {
 	public String quiz3(String table_name, int sale) {
 		String query="select empNo, empName, sale from ";
 		query=query+table_name;
-		query=query+"  where sale<=?";
+		query=query+" where sale<=?"; //pstmt 만 ? 처리가능
 		
 		try {
-			this.pstmt=this.conn.prepareStatement(query);
+			this.pstmt=this.conn.prepareStatement(query); //query문을 미리 넣음
 			this.pstmt.setInt(1, sale);
 			this.rs=this.pstmt.executeQuery();
 			
@@ -138,7 +138,7 @@ public class DataBaseClass {
 	
 	/** 4. 이름이 “오지호”인 사원의 사원번호, 사원명, 급여를 출력하기 **/
 	// select empNo, empName, sale from employee where empName='오지호';
-	public String quiz4(String table_name, String emp_name) {
+	public String quiz4(String table_name, String emp_name) { //오지호란이름 매개변수 삽입
 		String query="select empNo, empName, sale from ";
 		query=query+table_name;
 		query=query+"  where empName=?";
@@ -164,7 +164,7 @@ public class DataBaseClass {
 	/** 5. 급여가 250, 300, 500인 사원들의 사원 번호와 사원명과 급여를 검색하기 **/
 	// select empNo, empName, sale from employee where sale=250 or sale=300 or sale=500;
 	// 또는 
-	// select empNo, empName, sale from employee where sale IN (250, 300, 500);
+	// select empNo, empName, sale from employee where sale IN (250, 300, 500); //지정된 값이 포함되 있는지 확인하는 함수
 	public String quiz5(String table_name, int s1, int s2, int s3) {
 		String query="select empNo, empName, sale from ";
 		query=query+table_name;
@@ -227,6 +227,7 @@ public class DataBaseClass {
 		String query="select empNo, empName, sale from ";
 		query=query+table_name;
 		query=query+" where empName like CONCAT(?, '%') or empName like CONCAT('%', ?, '%')";
+//		자바에선 CONCAT으로 연결
 
 		try {
 			this.pstmt=this.conn.prepareStatement(query);
@@ -253,7 +254,7 @@ public class DataBaseClass {
 	public String quiz8(String table_name) {
 		String query="select empNo, empName, job, hiredate from ";
 		query=query+table_name;
-		query=query+" order by hiredate desc";
+		query=query+" order by hiredate desc"; //pstmt 비교검색x => stmt 처리
 
 		try {
 			this.stmt=this.conn.createStatement();
@@ -261,7 +262,7 @@ public class DataBaseClass {
 			
 			String[] fieldNames=this.getFieldNames(this.rs);
 
-			String resultTags=MethodClass.makeTagsQ8(rs, fieldNames);
+			String resultTags=MethodClass.makeTagsQ8(rs, fieldNames); // ?
 			return resultTags;
 		} catch (SQLException e) {
 			System.out.println("quiz8() ERR : "+e.getMessage());
@@ -274,6 +275,7 @@ public class DataBaseClass {
 	
 	/** 9. 부서 번호가 빠른 사원부터 출력하되 같은 부서내의 사원을 출력할 경우, 
 	 * 입사한지 가장 오래된 사원부터 출력하기 **/ 
+	//부서번호 정렬 , 입사일 정렬
 	// select deptno, empNo, empName, job, hiredate from employee order by deptno asc, hiredate asc;
 	public String quiz9(String table_name) {
 		String query="select deptno, empNo, empName, job, hiredate from ";
