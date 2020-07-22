@@ -4,11 +4,11 @@ public class ThreadTest {
 
 	public static void main(String[] args) {
 		System.out.println("main() 시작");
-		MyThread mt1 = new MyThread();
+		FakeThread mt1 = new FakeThread("A");
 		mt1.start();
-		MyThread mt2 = new MyThread();
+		FakeThread mt2 = new FakeThread("B");
 		mt2.start();
-		MyThread mt3 = new MyThread();
+		FakeThread mt3 = new FakeThread("C");
 		mt3.start();
 		System.out.println("main() 종료");
 		//사용방법 1.
