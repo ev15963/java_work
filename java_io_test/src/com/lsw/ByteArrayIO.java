@@ -11,7 +11,7 @@ public class ByteArrayIO {
 		byte b[]= {'a', 'b', 'c', 'd'};
 		
 		//배열 b를 읽는 ByteArrayInputStream 객체를 생성
-		ByteArrayInputStream bInput = new ByteArrayInputStream(b);
+		ByteArrayInputStream bInput = new ByteArrayInputStream(b); //byte 값 유니코드
 		
 		//배열 b를 소문자를 대문자로 출력하는 ByteArrayOutputSteam 객체를 생성
 		ByteArrayOutputStream bOutput= new ByteArrayOutputStream();
