@@ -19,7 +19,7 @@ public class MyInputStreamReader {
 			//파일 입력스트럼을 다시 InputStreamReader로 연결
 			InputStreamReader isr = new InputStreamReader(fis);
 			
-			//파일 입력스트림을 다시 InputStreamReader로 연결
+			//파일 입력스트림을 다시 BufferedReader로 연결
 			BufferedReader br = new BufferedReader(isr);
 			
 			//현재 InputStreamReader의 인코딩 방식  출력
