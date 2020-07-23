@@ -2,7 +2,7 @@ package com.lsw;
 
 public class MeClass extends Thread {
 		public MeClass() {
-		} //todtjdwk
+		} //»ý¼ºÀÚ
 		
 		public void run() {
 			MainClass.myBank.saveMoney(3000);

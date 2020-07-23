@@ -23,7 +23,7 @@ public class BankClass {
 		} catch (InterruptedException e) {
 			System.out.println(e.getMessage());
 		}
-		this.saveMoney(m + save);
+		this.setMoney(m + save);
 	} // saveMoney() END
 
 	public void minusMoney(int minus) { // 출금처리 메서드
