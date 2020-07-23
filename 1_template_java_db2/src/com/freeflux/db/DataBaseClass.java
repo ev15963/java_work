@@ -87,7 +87,7 @@ public class DataBaseClass {
 			// this.rs.next();
 			// System.out.println();
 			
-			String[] fN=this.getf
+//			String[] fN=this.getf
 		} catch (SQLException e) {
 			System.out.println("select_empName_sale err: " + e.getMessage());
 		} finally {

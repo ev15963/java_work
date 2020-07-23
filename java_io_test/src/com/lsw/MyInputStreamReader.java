@@ -24,7 +24,8 @@ public class MyInputStreamReader {
 			
 			//현재 InputStreamReader의 인코딩 방식  출력
 			System.out.println("getEncoding() => "+isr.getEncoding()); //InputStreamReader만 인코딩값 갖고 있다..
-			System.out.println();
+			System.out.poundException e) {
+			System.err.println();
 			//한줄씩 읽어 출력
 			while((line = br.readLine()) != null) {
 				System.out.println(line);
@@ -32,8 +33,7 @@ public class MyInputStreamReader {
 			br.close();
 			isr.close();
 			fis.close();
-		} catch (FileNotFoundException e) {
-			System.err.println("디음파일이 업습니다.: "+fname);
+		} catch (FileNotFrintln("디음파일이 업습니다.: "+fname);
 		} catch (IOException e) {
 			System.err.println(e);
 		}
