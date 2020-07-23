@@ -5,7 +5,7 @@ import java.net.InetAddress;
 public class MainClass {
 
 	public static void main(String[] args) {
-		String site="http://www.naver.com/index.html";
+		String site="https://www.naver.com/index.html";
 		
 		URLReader homePage = new URLReader(site);
 //		homePage.printConnectioninfo();
