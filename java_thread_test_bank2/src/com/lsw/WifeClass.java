@@ -1,9 +1,13 @@
 package com.lsw;
 
-public class WifeClass {
+public class WifeClass extends Thread{
 
 	public WifeClass() {
-		// TODO Auto-generated constructor stub
+	}
+	
+	public void run() {
+		MainClass.myBank.minusMoney(1000);
+		System.out.println("minusMoney(1000):"+MainClass.myBank.getMoney());
 	}
 
 }
