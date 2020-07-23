@@ -2,8 +2,12 @@ package com.lsw;
 
 public class MainClass {
 
-	public MainClass() {
-		// TODO Auto-generated constructor stub
+	public static void main(String[] args) {
+//		BasicUDPServer server = new BasicUDPServer(7777);
+//		server.communicate();
+		
+		BasicUDPClient client = new BasicUDPClient("172.30.1.12",7777);
+		client.communicate();
 	}
 
 }
