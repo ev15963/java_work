@@ -31,8 +31,6 @@ public class CreateFile {
 		}
 	}
 
-	public CreateFile() {
-		// TODO Auto-generated constructor stub
-	}
+
 
 }
