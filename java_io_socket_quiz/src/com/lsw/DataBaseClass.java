@@ -62,19 +62,19 @@ public class DataBaseClass {
 		}
 	}
 
-	public void qnaNum(String qna, String num) {
-		String query="select "+qna+" from quiz_table where no="+num;
-		
-		String temp ="";
-		try {
-			this.stmt=this.conn.createStatement();
-			this.rs=this.stmt.executeQuery(query);
-			temp = rs.getString(1);
-			ChangeEncoding.toUnicode(temp);
-		} catch (SQLException e) {
-			System.out.println("qnaNum err:"+e.getMessage());
-		}
-	}
+//	public void qnaNum(String qna, String num) {
+//		String query="select "+qna+" from quiz_table where no="+num;
+//		
+//		String temp ="";
+//		try {
+//			this.stmt=this.conn.createStatement();
+//			this.rs=this.stmt.executeQuery(query);
+//			temp = rs.getString(1);
+//			ChangeEncoding.toUnicode(temp);
+//		} catch (SQLException e) {
+//			System.out.println("qnaNum err:"+e.getMessage());
+//		}
+//	}
 
 	//
 	// /**조회 메서드 (전체 조회 : select * from 테이블명) **/

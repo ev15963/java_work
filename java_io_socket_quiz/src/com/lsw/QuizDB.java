@@ -37,7 +37,7 @@ public class QuizDB {
 	private PreparedStatement pstmt = null; // 테이블에 변수로 데이터 전달
 	private ResultSet rs = null; // select의 결과 객체 저장
 	// public int result = 0; // insert/update/delete 결과 저장
-	private String db_url_dbname = ""; // null과 차이???
+	private String db_url_dbname = null; // null과 차이???
 
 	// 기본생성자
 	public QuizDB() {
@@ -74,18 +74,18 @@ public class QuizDB {
 
 	/** quizInsert() 메서드 선언 시작 quiz_db의 quiz_table에 문제와 정답 삽입 **/
 	public void quizInsert() {
-		String[] problems = { "네트워크 처리 패키지는?", "자바의 최신버전은?", "" };
+		String[] problems = { "네트워크 처리 패키지는?", "자바의 최신버전은?", "인터넷에서 컴퓨터를 식별하는 주소는?" };
 		String[] answers = { "java.net", "1.8", "IP" }; // insert 방지
 
 		this.pstmt = null;
-		String sql_insert = "INSERT INTO quiz_table (question, answer)";
-		sql_insert += "VAULES(?,?)";
+		String sql_insert = "insert into quiz_table (question, answer)";
+		sql_insert +=" values(?,?)";
 		int result = 0;
 		try {
 			this.pstmt = this.conn.prepareStatement(sql_insert);
 			for (int i = 0; i < problems.length; i++) {
-				this.pstmt.setString(1, ChangeEncoding.toLatin(problems[i]));
-				this.pstmt.setString(2, ChangeEncoding.toLatin(problems[i]));
+				this.pstmt.setString(1, ChangeEncoding.javaToMysql(problems[i]));
+				this.pstmt.setString(2, ChangeEncoding.javaToMysql(problems[i]));
 				result = this.pstmt.executeUpdate();
 				// System.out.println("for => result : "+result+""+i);
 			}
@@ -109,8 +109,10 @@ public class QuizDB {
 			while (rs.next()) {
 				quiz_object = new quiz();
 				quiz_object.setQuizNo(rs.getInt("no"));
-				quiz_object.setQuizQuestion(ChangeEncoding.toLatin(rs.getString(1)));
-				quiz_object.setQuizAnswer(ChangeEncoding.toLatin(rs.getString(2)));
+				
+				//mySQL 자바
+				quiz_object.setQuizQuestion(ChangeEncoding.mysqlToJava(rs.getString("question")));
+				quiz_object.setQuizAnswer(ChangeEncoding.mysqlToJava(rs.getString("answer")));
 				quiz_list.add(quiz_object);
 				quiz_object = null;
 			}
