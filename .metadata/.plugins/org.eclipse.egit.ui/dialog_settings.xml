@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="2" key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel"/>
+	<item value="C:\git\.git" key="GitSelectRepositoryPage.lastRepository"/>
 	<list key="RepositorySelectionPage.UsedUris">
 		<item value="https://github.com/ev15963/java_work"/>
 	</list>
@@ -19,6 +21,8 @@
 	<section name="PushToGerritPage">
 		<item value="master" key="Repository[C:\git\.git].lastBranch"/>
 		<item value="https://www.github.com/ev15963/java_work" key="Repository[C:\git\.git].lastUri"/>
+	</section>
+	<section name="GitImportWizard">
 	</section>
 	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
 		<item value="666" key="DIALOG_WIDTH"/>
