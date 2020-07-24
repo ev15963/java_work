@@ -1,0 +1,12 @@
+	private static final int WAITING = 0;
+	private static final int PROBLEM=1;
+	private static final int ANSWER=2;
+	
+			//초기 대기 상태일 경우, client에게 보여줄 내용
+		if (state == WAITING) {
+			
+		} else if (state == PROBLEM) {
+			//답이 제출되었을 때 
+		} else if (state == ANSWER) { 상대방이 입력한 값을 비교
+			currentProblem = (currentProblem + 1) % NUMPROBLEMS;
+		}
