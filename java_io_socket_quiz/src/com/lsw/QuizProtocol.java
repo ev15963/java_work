@@ -27,7 +27,7 @@ public class QuizProtocol {
 		if (state == WAITING) {
 			// client에게 질문
 			theOutput = "퀴즈를 시작합니다(y/n)";
-			state = PROBLEM;
+			state = PROBLEM; //=> problem
 			// client가 계속 문제를 진행할 것이지 여부
 		} else if (state == PROBLEM) {
 

@@ -1,12 +1,17 @@
 package com.lsw;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class QuizServer {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
 		ServerSocket serverSocket = null;
 		try {
 			serverSocket=new ServerSocket(5555);
@@ -25,7 +30,47 @@ public class QuizServer {
 		
 		// 클라이언트와 통신분비 끝
 		// 클라이언트아 통신시작
-		// PrintWriter out은 클라이언트에게 전송하기 위한 
-	}
+		// PrintWriter out은 클라이언트에게 전송하기 위한 객체
+		OutputStream clientOut=clientSocket.getOutputStream();
+		PrintWriter out =new PrintWriter(clientOut, true);
+		
+		//InputStreamReader isr 과 BufferedReader in는 클라이언트가 입력한 내용
+		InputStream clientInput = clientSocket.getInputStream();
+		InputStreamReader isr = new InputStreamReader(clientInput);
+		BufferedReader in = new BufferedReader(isr);
+		
+		//String inputLine는 BufferedReader in의 데이터를 저장
+		//String outputLine는 클라이언트에게 내보낼 메시지 저장
+		String inputLine, outputLine;
+		
+		//퀴즈시작
+		
+		//퀴즈를 진행하기 위한 객체생성
+		QuizProtocol qp = new QuizProtocol();
+		
+		//퀴즈 프로세스 시작
+		outputLine = qp.process(null); 
+		/** qp.process(null);
+		 * 초기 client로부터 전달받은 값이 없으므로 null를 전달하여
+		 * 프로세스 시작 //"퀴즈를 시작합니다."
+		 * 향후 client가 전송한 값들을 전달...
+		 * **/
+		out.println(outputLine);		//"퀴즈를 시작합니다.(y/n)"를 client에게 전송
+		//클라이언트에게 전송
+		//아래 부분은 client가 입력값을 전송했을 경우 실행 그전에는 일시정지!!
+		//client : "y", "Y" 입력후 ,서버로 전소하면
+		//client : "java.net" 입력 후, 서버로 전송하면
+		while ((inputLine = in.readLine())!= null) {
+			outputLine = qp.process(inputLine); //'y', "Y"
+						//qp.process('y');, qp.process("y");
+						//qp.process("java.net");
+			out.println(outputLine);	//네트워크 처리 패키지는?를 client에게 전송 quit;
+			//2.정답 (y/n)또는 오답 (y/n)를 client에게 전송 protocol
+			if(outputLine.equals("quit")) {
+				break;
+			}
+		} //while() END
+		out.close(); in.close(); clientSocket.close(); serverSocket.close();
+	} //main END
 
-}
+} //class END
