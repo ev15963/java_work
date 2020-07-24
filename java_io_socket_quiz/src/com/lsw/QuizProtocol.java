@@ -13,21 +13,38 @@ public class QuizProtocol {
 	 private int currentProblem = 0;  // 문항번호 저장 변수
 	            // 아래의 두가지 배열을 이용하여
 	            // 문제와 정답을 확인.
+	 
+	 DataBaseClass dbc= new DataBaseClass();
+	 
+	 
 	 // 문제 배열 / 정답 배열
-	 private String[] problems = { "네트워크 처리 패키지는?", "자바의 안정화된 최신버전은?", "인터넷에서 컴퓨터를 식별하는 주소는?" };
-	 private String[] answers = { "java.net", "1.8", "IP" };
+//	 private String[] problems = { "네트워크 처리 패키지는?", "자바의 안정화된 최신버전은?", "인터넷에서 컴퓨터를 식별하는 주소는?" };
+//	 private String[] answers = { "java.net", "1.8", "IP" };
 
+	 
 	 // ----------------------------------------------------------------------------------
 	 
-	 public QuizProtocol() { // 기본 생성자
-	 } // 기본 생성자 END
+
+	 //QuizServer => main() {
+	 //QuizProtocol qp = new QuizProtocol();
+	 //qp.process();
+	 private QuizDB qdb=null;
+	 public QuizProtocol() { //생성자
+		 qdb=new QuizDB("quiz_db"); //주소+데이터이름
+		 qdb.connectMySQL();	//접속 메서드
+		 qdb.quizInsert();		//QuizProtocol의 String[] 테이블 문제/정답 삽입
+		 qdb.quizSelect();		//테이블안의 데이터를 조회 후
+		 //각 레코드를 Quiz 객체 생성한 후 ArrayList에 add()
+	 }//생성자 END
+	 
+
 	 
 	 // ----------------------------------------------------------------------------------
 	 
 	 /**  문제를 제공하고 정답을 확인해주는 전반적인 프로세스 메서드  **/
 	 public String process(String theInput) {
 	  String theOutput = null;
-	  
+//	  dbc.qnaNum(question, currentProblem);
 	  // 초기 대기 상태일 경우, client에게 보여줄 내용
 	  if (state == WAITING) {
 	   // client에게 질문
@@ -39,7 +56,8 @@ public class QuizProtocol {
 	   
 	   // client가 퀴즈 진행을 하겠다고 "y" 또는 "Y"를 입력했을 때
 	   if (theInput.equalsIgnoreCase("y")) {  // 대소문자 무시..
-	    theOutput = problems[currentProblem];  // 문제제공
+	    theOutput = qdb.quiz_list.get(currentProblem).getQuizAnswer();
+	               //problems[currentProblem];  // 문제제공
 	    state = ANSWER;
 	    
 	   } else { // client가 "n" ,  "N"을 입력했을 경우.
@@ -49,7 +67,8 @@ public class QuizProtocol {
 	  
 	  // 답이 제출되었을 때
 	  } else if (state == ANSWER) {
-	   if (theInput.equalsIgnoreCase(answers[currentProblem])) {
+	   if (theInput.equalsIgnoreCase(qdb.quiz_list.get(currentProblem).getQuizAnswer()))
+		   							//answers[currentProblem])) {
 	    theOutput = "정답입니다. 계속하시겠습니까? (y/n)";
 	    state = PROBLEM;
 	   } else {
@@ -58,7 +77,7 @@ public class QuizProtocol {
 	   }
 	   
 	   currentProblem = (currentProblem + 1) % NUMPROBLEMS;
-	  }
+//	  }
 	  return theOutput;
 	 }
 
