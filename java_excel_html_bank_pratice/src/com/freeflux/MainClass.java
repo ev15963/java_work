@@ -5,10 +5,10 @@ public class MainClass {
 	public static void main(String[] args) { //fromconsole createtags makehtml
 		int pageNo= MethodClass.fromConsole();
 		System.out.println(pageNo);
-//		String htmlTags=MethodClass.createTags();
-//		System.out.println(htmlTags);
-//		
-//		PrintClass.makeHTML(htmlTags, pageNo);
+		String htmlTags=MethodClass.createTags();
+		System.out.println(htmlTags);
+		
+		PrintClass.makeHTML(htmlTags, pageNo);
 //
 //		String tags="";
 //		DataClass dc = new DataClass();

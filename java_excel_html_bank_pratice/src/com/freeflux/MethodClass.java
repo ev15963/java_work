@@ -7,7 +7,7 @@ import com.freeflux.xls.ExcelReader;
 public class MethodClass {
 
 	private static int list=10;
-	private static int pageNo=1;
+	private static int pageNo=0;
 	private static int startIndex=0;
 	public static String uri="c:/filetest/";
 	
@@ -18,13 +18,14 @@ public class MethodClass {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("읽어들일 파일 bank_data");
 		String filename = sc.nextLine();
+//		String filename = "bank_data";
 		System.out.println("읽어들일 페이지:");
 		int pageNo = sc.nextInt();
-		uri += (filename + ".xls");
+		uri = uri +filename + ".xls";
 		System.out.println(uri);
 		
 		pageNo-=1;
-		startIndex=pageNo*list+1;
+		startIndex=pageNo*list; //시작점 1부터
 		
 		ExcelReader.readExcelFile(uri, startIndex, list);
 		uri=null;

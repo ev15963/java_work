@@ -36,15 +36,15 @@ public class ExcelReader {
 			
 			for(int count =0; count<list;count++) {
 				c=new String[11];
-				for(int i1 =0; i1<11;i1++) {
-					c[i1]=s.getCell(i1, 0).getContents();
-					System.out.println(c[i1]);
+				for(int j =0; j<11;j++) {
+					c[j]=s.getCell(j, i).getContents(); //ї­,За
+					System.out.println(c[j]);
 				}
 				
 				o=new ObjectClass(c[0], c[1], c[2], c[3], c[4], c[5], 
 						c[6], c[7], c[8], c[9], c[10]);
 				
-				
+//				System.out.println(c[0]);
 				
 				
 				o.variableValues();

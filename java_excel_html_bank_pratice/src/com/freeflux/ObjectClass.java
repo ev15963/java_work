@@ -181,7 +181,9 @@ System.out.println("testtesttesttesttesttesttest");
 	
 	/** 객체 변수값 확인 메서드 **/
 	public void variableValues() {
-		System.out.println(this.no+"_"+this.age);
+		System.out.println(this.no + "_" + this.age + "_" + this.job + "_" + this.marital + "_" + this.education + "_"
+				+ this.housing + "_" + this.loan + "_" + this.contact + "_" + this.month + "_" + this.day_of_week + "_"
+				+ this.duration);
 	}
 
 	/** 아래 메서드들은 private 변수 접근 메서드들 **/
