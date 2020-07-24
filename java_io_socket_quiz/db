@@ -1,0 +1,79 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| navercafe          |
+| test               |
++--------------------+
+4 rows in set (0.11 sec)
+
+mysql> create database quiz_db;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| navercafe          |
+| quiz_db            |
+| test               |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> use quiz_db;
+Database changed
+mysql> create table quiz_table(
+    -> no int auto_increment primary key,
+    -> question varchar(100),
+    -> answer varchar(50)
+    -> );
+Query OK, 0 rows affected (28.23 sec)
+
+mysql> insert table quiz_table(
+    -> no int auto_increment primary key,
+    -> question varchar(100),
+    -> answer varchar(50)
+    -> );
+mysql> desc quiz_table;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| no       | int(11)      | NO   | PRI | NULL    | auto_increment |
+| question | varchar(100) | YES  |     | NULL    |                |
+| answer   | varchar(50)  | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+3 rows in set (0.04 sec)
+
+mysql> show tables;
++-------------------+
+| Tables_in_quiz_db |
++-------------------+
+| quiz_table        |
++-------------------+
+1 row in set (0.01 sec)
+
+mysql> insert into quiz_table
+    -> (no, question, answer) values (1, '네트워크 처리 패키지는?', 'java.net');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into quiz_table
+    -> (no, question, answer) values (2, '자바의 안정화된 최신버전은?', '1.8');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into quiz_table
+    -> (no, question, answer) values (3, '인터넷에서 컴퓨터를 식별하는 주소는?', 'IP');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from quiz_table;
++----+--------------------------------------+----------+
+| no | question                             | answer   |
++----+--------------------------------------+----------+
+|  1 | 네트워크 처리 패키지는?            		    | java.net |
+|  2 | 자바의 안정화된 최신버전은?        		    | 1.8      |
+|  3 | 인터넷에서 컴퓨터를 식별하는 주소는?			    | IP       |
++----+--------------------------------------+----------+
+3 rows in set (0.00 sec)
