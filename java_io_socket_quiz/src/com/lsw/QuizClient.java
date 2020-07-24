@@ -11,7 +11,7 @@ import java.net.UnknownHostException;
 
 public class QuizClient {
 
-	public static void main(String[] args) throws Exception{
+	public static void main(String[] args) throws IOException{
 		Socket quizSocket = null;
 		PrintWriter out = null;
 		BufferedReader in = null;
@@ -29,8 +29,10 @@ public class QuizClient {
 			
 		} catch (UnknownHostException e) {
 			System.err.println("localhost에 접속할 수 없습니다.");
+			System.exit(1);
 		} catch (IOException e) {
-			
+			System.err.println("입출력오류");
+			System.exit(1);
 		}
 		
 		//여기부터 서버와 통신 시작
@@ -50,7 +52,7 @@ public class QuizClient {
 			//client가 입력한 데이터 읽은 후 서버로 전송
 			fromUser = user.readLine(); //"y"
 			if(fromUser != null) {
-				System.out.println("클라이언트: "+ fromServer);
+				System.out.println("클라이언트: "+ fromUser);
 				out.print(fromUser); //서버로 전송
 			}
 		} // while END
