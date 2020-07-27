@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.transform.Scale;
 import javafx.stage.Stage;
 
@@ -37,11 +38,17 @@ public class BorderPaneTest extends Application{
 		borderPane.setCenter(btn[1]);
 		borderPane.setAlignment(btn[2], Pos.BOTTOM_CENTER);
 		
-		HBox hb = new HBox();
-		borderPane.getChildren().add(btn[2]);
-		borderPane.getChildren().add(btn[3]);
-		borderPane.getChildren().add(btn[4]);
-		borderPane.setBottom(hb);
+		VBox vb = new VBox();
+		vb.getChildren().add(btn[2]);
+		vb.getChildren().add(btn[3]);
+		vb.getChildren().add(btn[4]);
+		borderPane.setBottom(vb);
+		
+//		HBox hb = new HBox();
+//		borderPane.getChildren().add(btn[2]);
+//		borderPane.getChildren().add(btn[3]);
+//		borderPane.getChildren().add(btn[4]);
+//		borderPane.setBottom(hb);
 		//border 컨테이너의 각 부분에 위치할 버튼 지정
 		
 		primaryStage.setTitle("BorderPaneFx"); //윈도우 창 제목설정 메서드
