@@ -15,7 +15,7 @@ public class LifeCycleTest extends Application{
 	}
 
 	@Override
-	public void init() throws Exception {
+	public void init() throws Exception { //선택 메서드
 		super.init();
 		System.out.println(Thread.currentThread().getName()+ ":init()");
 		
