@@ -1,6 +1,7 @@
 package com.freeflux;
 
 import com.freeflux.db.DataBaseClass;
+import com.freeflux.outside.PrintClass;
 
 public class MainClass {
 
@@ -35,6 +36,16 @@ public class MainClass {
 		
 		resultTags=dbc.quiz9("employee");
 		System.out.println("dbc.quiz9() : " + resultTags);
+
+		PrintClass.MakeHTML(dbc.quiz1("employee"),"1");
+		PrintClass.MakeHTML(dbc.quiz2("employee"),"2");
+		PrintClass.MakeHTML(dbc.quiz3("employee", 300),"3");
+		PrintClass.MakeHTML(dbc.quiz4("employee", "ø¿¡ˆ»£"),"4");
+		PrintClass.MakeHTML(dbc.quiz5("employee",  250, 300, 500),"5");
+		PrintClass.MakeHTML(dbc.quiz6("employee",  250, 300, 500),"6");
+		PrintClass.MakeHTML(dbc.quiz7("employee",  "±Ë", "±‚"),"7");
+		PrintClass.MakeHTML(dbc.quiz8("employee"),"8");
+		PrintClass.MakeHTML(dbc.quiz9("employee"),"9");
 	}
 
 }

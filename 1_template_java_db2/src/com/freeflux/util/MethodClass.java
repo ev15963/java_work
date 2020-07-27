@@ -66,7 +66,7 @@ public class MethodClass {
 		String mkTg="";
 		
 		//기본태그
-		mkTg+=
+//		mkTg+=
 	}
 	
 	
