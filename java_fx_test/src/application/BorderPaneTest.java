@@ -5,6 +5,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.transform.Scale;
@@ -12,9 +13,6 @@ import javafx.stage.Stage;
 
 public class BorderPaneTest extends Application{
 
-	public static void main(String[] args) {
-		launch(args);
-	}
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -32,30 +30,43 @@ public class BorderPaneTest extends Application{
 		}
 		//반복문을 사용하여 각 버튼에 이름을 넣어주세요.
 		
-		borderPane.setTop(btn[0]); //BorderPane 객체의 배치 메서드(컴포넌트)
-		borderPane.setAlignment(btn[0], Pos.TOP_CENTER);
+//		borderPane.setTop(btn[0]); //BorderPane 객체의 배치 메서드(컴포넌트)
+//		borderPane.setAlignment(btn[0], Pos.TOP_CENTER);
+//		
+//		borderPane.setCenter(btn[1]);
+//		borderPane.setAlignment(btn[2], Pos.BOTTOM_CENTER);
+//		borderPane.setCenter(btn[2]);
+
+		FlowPane fp = new FlowPane();
+		fp.getChildren().add(btn[0]);
+		fp.getChildren().add(btn[1]);
+		fp.getChildren().add(btn[2]);
+		fp.getChildren().add(btn[3]);
+		fp.getChildren().add(btn[4]);
 		
-		borderPane.setCenter(btn[1]);
-		borderPane.setAlignment(btn[2], Pos.BOTTOM_CENTER);
-		
-		VBox vb = new VBox();
-		vb.getChildren().add(btn[2]);
-		vb.getChildren().add(btn[3]);
-		vb.getChildren().add(btn[4]);
-		borderPane.setBottom(vb);
+//		VBox vb = new VBox();
+//		vb.getChildren().add(btn[2]);
+//		vb.getChildren().add(btn[3]);
+//		vb.getChildren().add(btn[4]);
+//		borderPane.setBottom(vb);
 		
 //		HBox hb = new HBox();
-//		borderPane.getChildren().add(btn[2]);
-//		borderPane.getChildren().add(btn[3]);
-//		borderPane.getChildren().add(btn[4]);
+//		hb.getChildren().add(btn[2]);
+//		hb.getChildren().add(btn[3]);
+//		hb.getChildren().add(btn[4]);
 //		borderPane.setBottom(hb);
-		//border 컨테이너의 각 부분에 위치할 버튼 지정
+//		//border 컨테이너의 각 부분에 위치할 버튼 지정
 		
 		primaryStage.setTitle("BorderPaneFx"); //윈도우 창 제목설정 메서드
-		Scene scene=new Scene(borderPane,300,100); //레이아웃객체 W H
+		Scene scene=new Scene(fp,300,100); //레이아웃객체 W H
 		primaryStage.setScene(scene); //스테이지에 씬 설정
 		primaryStage.show(); //스테이지 출력.. (이 메서드 생략 시,
 							// 사용자 화면이 보이지 않음!!
+	}
+	
+
+	public static void main(String[] args) {
+		launch(args);
 	}
 
 }
