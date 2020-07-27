@@ -59,6 +59,9 @@ public class GridPanelTest extends Application{
 		 fpane.setStyle("-fx-background-color : black;");
 		 //레이아웃의 배경을 검은 색으로 설정
 		 
+		 fpane.setStyle("-fx-background-color : black;");
+		 gridPane.setStyle("-fx-background-color : cyan;");
+		 
 		  gridPane.add(fpane, 0, 2, 2, 1);
 		  //자식컴포넌트, 열의 인덱스, 행의 인덱스, 열크기, 행크기
 		  
