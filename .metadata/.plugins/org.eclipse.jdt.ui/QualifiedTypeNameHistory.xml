@@ -44,7 +44,6 @@
 <fullyQualifiedTypeName name="java.net.DatagramPacket"/>
 <fullyQualifiedTypeName name="com.lsw.BasicUDPServer"/>
 <fullyQualifiedTypeName name="com.lsw.BasicUDPClient"/>
-<fullyQualifiedTypeName name="java.net.ServerSocket"/>
 <fullyQualifiedTypeName name="java.net.Socket"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="java.io.OutputStream"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="com.lsw.quiz.Quiz"/>
 <fullyQualifiedTypeName name="com.lsw.ChangeEncoding"/>
 <fullyQualifiedTypeName name="com.lsw.QuizDB"/>
+<fullyQualifiedTypeName name="java.net.ServerSocket"/>
 </qualifiedTypeNameHistroy>
