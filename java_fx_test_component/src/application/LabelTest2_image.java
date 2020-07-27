@@ -63,4 +63,8 @@ public class LabelTest2_image extends Application {
 		launch(args);
 	}
 
+	public static void main(String[] args) {
+		Insets
+	}
+
 }
