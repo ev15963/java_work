@@ -8,10 +8,11 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="DRIVER con ERR"/>
+			<item value="conn"/>
 			<item value="makeHTML"/>
 			<item value="datagram"/>
 			<item value="DRIVER"/>
-			<item value="DRIVER con ERR"/>
 			<item value="qp"/>
 			<item value="close"/>
 			<item value="BufferedReader"/>
@@ -22,7 +23,6 @@
 			<item value="Encoding"/>
 			<item value="End"/>
 			<item value="quiz_table"/>
-			<item value="패키지"/>
 		</list>
 		<list key="replacehistory">
 			<item value="+="/>
@@ -44,9 +44,9 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="288" key="DIALOG_WIDTH"/>
-		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|5|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="1349" key="DIALOG_X_ORIGIN"/>
-		<item value="241" key="DIALOG_Y_ORIGIN"/>
+		<item value="1391" key="DIALOG_X_ORIGIN"/>
+		<item value="339" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
