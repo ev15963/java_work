@@ -47,7 +47,7 @@ public class RadioButtonTest extends Application {
 			}
 		});
 		
-		vb.getChildren().addAll(rb1, rb2, rb3);
+		vb.getChildren().addAll(rb1, rb2, rb3, btn);
 		vb.setPrefSize(300, 200);
 		
 		primaryStage.setScene(new Scene(vb));
