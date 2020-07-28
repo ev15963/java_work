@@ -22,7 +22,7 @@ public class QuizDB {
 	// 3306: mySQL의 데이터 입출력 지원 포트번호
 	// 위의 포트번호는 제품마다 다름 (오라클은 8080이 기본 포트번호)
 
-	private final String DB_URL_DBNAME;
+	private final String DB_URL_DBNAME=null;
 	
 	private final String DBID = "root"; // 관리자 ID
 	// mySQL 5.1은 "root"로 고정
