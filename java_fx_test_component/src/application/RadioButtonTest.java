@@ -32,6 +32,13 @@ public class RadioButtonTest extends Application {
 		rb3.setToggleGroup(group);
 		
 		rb2.setSelected(true); //기본적으로 선택힝 버튼 설정
+		
+		vb.getChildren().addAll(rb1, rb2, rb3);
+		vb.setPrefSize(300, 200);
+		
+		primaryStage.setScene(new Scene(vb));
+		primaryStage.setTitle("RadioButton Test");
+		primaryStage.show();
 	}
 	
 	public static void main(String[] args) {
