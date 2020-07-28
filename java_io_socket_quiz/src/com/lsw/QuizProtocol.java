@@ -56,8 +56,8 @@ public class QuizProtocol {
 	   
 	   // client가 퀴즈 진행을 하겠다고 "y" 또는 "Y"를 입력했을 때
 	   if (theInput.equalsIgnoreCase("y")) {  // 대소문자 무시..
-	    theOutput = qdb.quiz_list.get(currentProblem).getQuizAnswer();
-	               //problems[currentProblem];  // 문제제공
+	    theOutput = qdb.quiz_list.get(currentProblem).getQuizQuestion();
+//	    theOutput = problems[currentProblem];  // 문제제공
 	    state = ANSWER;
 	    
 	   } else { // client가 "n" ,  "N"을 입력했을 경우.

@@ -22,7 +22,6 @@ public class QuizDB {
 	// 3306: mySQL의 데이터 입출력 지원 포트번호
 	// 위의 포트번호는 제품마다 다름 (오라클은 8080이 기본 포트번호)
 
-	private final String DB_URL_DBNAME=null;
 	
 	private final String DBID = "root"; // 관리자 ID
 	// mySQL 5.1은 "root"로 고정
@@ -54,7 +53,7 @@ public class QuizDB {
 	public void connectMySQL() {
 		// this.dbname = db_name;
 		try {
-			Class.forName(DB_URL_DBNAME);
+			Class.forName(DRIVER);
 			this.conn = DriverManager.getConnection(this.db_url_dbname, DBID, DBPW);
 			// com.mysql.jdbc: 패키지명
 			// Driver : Driver.class
@@ -63,13 +62,13 @@ public class QuizDB {
 			// String url = this.DBURL + this.dbname;
 			// try {
 			// this.conn = DriverManager.getConnection(url, this.DBID, "1234");
-		} catch (SQLException e) {
+		} catch (ClassNotFoundException e) {
 			System.out.println("드라이버 ㅇㄹ" + e.getMessage());
 
 			// getConnection()는 db명이 null아닌 이상,
 			// db명이 없어도 접속에 성공할 수 있기 때문에 오류 발생안함
 			// 단, db명이 있을 경우 , 즉, 잘못입력했을 경우에는 오류발생!!
-		} catch (ClassNotFoundException e) {
+		} catch (SQLException e) {
 			System.out.println("DRIVER con ERR:" + e.getMessage());
 		}
 	}
@@ -87,9 +86,9 @@ public class QuizDB {
 			this.pstmt = this.conn.prepareStatement(sql_insert);
 			for (int i = 0; i < problems.length; i++) {
 				this.pstmt.setString(1, ChangeEncoding.javaToMysql(problems[i]));
-				this.pstmt.setString(2, ChangeEncoding.javaToMysql(problems[i]));
+				this.pstmt.setString(2, ChangeEncoding.javaToMysql(answers[i]));
 				result = this.pstmt.executeUpdate();
-				// System.out.println("for => result : "+result+""+i);
+				 System.out.println("for => result : "+result+""+i);
 			}
 		} catch (SQLException e) {
 			System.out.println("quizInsert err : " + e.getMessage());
@@ -105,7 +104,7 @@ public class QuizDB {
 		String sql_select = "select * from quiz_table";
 
 		try {
-			this.conn.createStatement();
+			this.stmt = this.conn.createStatement();
 			this.rs = this.stmt.executeQuery(sql_select);
 			quiz quiz_object = null;
 			while (rs.next()) {

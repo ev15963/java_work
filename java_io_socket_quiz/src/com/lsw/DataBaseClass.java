@@ -22,6 +22,7 @@ public class DataBaseClass {
 	// 위의 포트번호는 제품마다 다름 (오라클은 8080이 기본 포트번호)
 
 	public final String DBID = "root"; // 관리자 ID
+	public final String DBPW = "1234"; // 관리자 PW
 	// mySQL 5.1은 "root"로 고정
 	// 오라클에서는 사용자 계정 (즉, DB명)으로 변경됨
 	// 참고 : 소규모 업체는 APM을 주로 사용 (Apach/ PHP / MySQL)
