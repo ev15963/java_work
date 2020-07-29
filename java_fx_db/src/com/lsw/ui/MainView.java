@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Pagination;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -48,15 +49,20 @@ public class MainView extends Application{
 				//반환할 레이아웃 객체
 				BorderPane p = new BorderPane();
 				if(param==0) {
-					
+					//기본화면
 				}else if(param==1) {
+					/** 인덱스가 1일 경우의 처리*/
+					p.setStyle("-fx-background-color:pink");
 					
+					Button b = new Button("테스트2");
+					b.setPrefSize(100, 30); //버튼 크기
+					p.setBottom(b);
 				}else if(param==2) {
 					
 				} else {
 					
 				}
-				return null;
+				return p;
 			}
 		});
 		
