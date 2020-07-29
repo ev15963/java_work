@@ -1,11 +1,15 @@
 package com.lsw.ui;
 
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Pagination;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import javafx.util.Callback;
+
 
 public class MainView extends Application{
 
@@ -28,6 +32,34 @@ public class MainView extends Application{
 		/** Pagination 객체 생성 */
 		Pagination pagination = new Pagination(4); //페이지수
 		load.setCenter(pagination);
+		
+		
+		/**Pagination 스타일 변경 - 페이지 버튼 컨트롤 디자인 변경 */
+		pagination.getStyleClass().add(Pagination.STYLE_CLASS_BULLET);
+		
+		
+		/**각 버튼을 클릭하거나 좌우 화살표 버튼을 클릭했을 때 */
+		/**Pagination 페이지별 화면구성을 위한 pageFactory 속성 변경 */
+		pagination.setPageFactory(new Callback<Integer, Node>() {
+
+			@Override
+			public Node call(Integer param) {
+				/**인덱스별 페이지 로직처리*/
+				//반환할 레이아웃 객체
+				BorderPane p = new BorderPane();
+				if(param==0) {
+					
+				}else if(param==1) {
+					
+				}else if(param==2) {
+					
+				} else {
+					
+				}
+				return null;
+			}
+		});
+		
 		
 		stage.show();
 		
