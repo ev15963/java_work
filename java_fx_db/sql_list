@@ -1,0 +1,104 @@
+mysql> create database cafedb;
+Query OK, 1 row affected (0.03 sec)
+
+mysql> use cafedb;
+Database changed
+mysql> create table cafe_table (
+    -> seqno int auto_increment primary key,
+    -> nickname varchar(20) not null,
+    -> name varchar(20) not null,
+    -> rating varchar(4) not null default '¸â¹ö',
+    -> regidate char(10) not null,
+    -> lastdate char(10) not null,
+    -> visitno int not null default 0,
+    -> postno int not null default 0,
+    -> replyno int not null default 0,
+    -> gender char(2) not null,
+    -> );
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('4ever995', 'ÀÌ»ó¿ì', '¸â¹ö', '2020.07.27', '2020.07.28', 7,0, 0, '³²');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('magicoh', '¿À¿µÁÖ', '¸â¹ö', '2020.07.06', '2020.07.28', 56,0, 0, '³²');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('inulee112', 'ÀÌÂù¿ì', '¸â¹ö', '2020.07.01', '2020.07.28', 62,0, 0, '³²');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('eungi0916', 'È«Àº±â', '¸â¹ö', '2020.07.01', '2020.07.28', 65,0, 0, '³²');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('simhyung777', '½ÉÇöÁ¾', '¸â¹ö', '2020.07.01', '2020.07.28', 80,0, 0, '³²');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('rexratm', 'ÀÌµ¿ÈÄ', '¸â¹ö', '2020.07.01', '2020.07.28', 79,0, 0, '³²');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('wnscjf121355', 'ÇãÁØÃ¶', '¸â¹ö', '2020.07.01', '2020.07.28', 64,0, 0, '³²');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('interest12', '±èÇöÁß', '¸â¹ö', '2020.07.01', '2020.07.28', 71,0, 0, '³²');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('mmk003', 'ÀÓµ¿Çö', '¸â¹ö', '2020.07.01', '2020.07.28', 80,0, 0, '³²');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('wkdalsehdgns', 'Àå¹Î¼®', '¸â¹ö', '2020.07.01', '2020.07.28', 77,0, 0, '³²');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('ygk1204', '±è¿¬°æ', '¸â¹ö', '2020.07.01', '2020.07.28', 66,0, 0, '¿©');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('yhs2543', 'À±Çü¼®', '¸â¹ö', '2020.07.01', '2020.07.28', 67,0, 0, '³²');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('tyan919', 'Çü¿µÂù', '¸â¹ö', '2020.07.01', '2020.07.28', 73,0, 0, '³²');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('mrarchi1106', '¼Õ¿ì¼·', '¸â¹ö', '2020.07.01', '2020.07.28', 75,0, 0, '³²');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('wkfgkfrk', '±èÇüÁø', '¸â¹ö', '2020.07.01', '2020.07.17', 38,0, 0, '³²');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('chiehun', 'ÃÖÈÆ', '¸â¹ö', '2020.07.01', '2020.07.28', 77,0, 0, '³²');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('rlduq1993', '±è±â¿±', '¸â¹ö', '2020.07.01', '2020.07.28', 61,0, 0, '³²');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('rnjsdydwp9', '±Ç¿ëÁ¦', '¸â¹ö', '2020.07.01', '2020.07.28', 62,0, 0, '³²');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('tjddms2565', 'È«¼ºÀº', '¸â¹ö', '2020.07.01', '2020.07.28', 48,0, 0, '¿©');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('critic57', 'ÀÌ¼ÖÈñ', '¸â¹ö', '2020.07.01', '2020.07.28', 72,0, 0, '¿©');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('dkfhfp', 'Á¤ÁØ±¸', '¸â¹ö', '2020.07.01', '2020.07.28', 71,0, 0, '³²');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('hkj5455', '±èÁøÇõ', '¸â¹ö', '2020.07.01', '2020.07.28', 107,0, 0, '³²');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('jyjyc488', 'Àü¼ÒÇö', '¸â¹ö', '2020.07.01', '2020.07.28', 74,0, 0, '¿©');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('jjw1843', 'ÀåÀç¿ì', '¸â¹ö', '2020.07.01', '2020.07.27', 21,0, 0, '³²');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('slkim7702', '±è½ÂÀÏ', '¸â¹ö', '2020.07.01', '2020.07.28', 85,0, 0, '³²');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('lspicnic', '°­Àººó', '¸â¹ö', '2020.07.01', '2020.07.28', 72,0, 0, '¿©');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('dhkim8919', '±è´ëÈÆ', '¸â¹ö', '2020.07.01', '2020.07.28', 84,0, 0, '³²');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('whdbstn97', 'Á¶À±¼ö', '¸â¹ö', '2020.07.01', '2020.07.28', 85,0, 0, '³²');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into cafe_table (nickname,    name,   rating,  regidate,  lastdate,   visitno,   postno,  replyno,  gender) values ('jjk224', 'ÁöÁØ±Ô', '¸â¹ö', '2020.07.01', '2020.07.28', 51,0, 0, '³²');
+Query OK, 1 row affected (0.02 sec)
