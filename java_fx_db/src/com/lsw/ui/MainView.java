@@ -1,6 +1,8 @@
 package com.lsw.ui;
 
 import com.lsw.db.DataBaseClass;
+import com.lsw.obj.CafeMember;
+import com.lsw.obj.DataClass;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -26,7 +28,7 @@ public class MainView extends Application {
 	public static String[] field_names;
 	
 	public MainView() {
-		dbc=new DataBaseClass();
+//		dbc=new DataBaseClass();
 	}
 
 
@@ -60,18 +62,24 @@ public class MainView extends Application {
 				BorderPane p = new BorderPane();
 				if (param == 0) {
 					/** 인덱스가 0일 경우의 페이지 처리 로직 구간 */
-					TableView table=new TableView();
+					
 					
 					dbc.connect_db();
 					dbc.selectAll("cafe_table");
+					
+					TableView<CafeMember> table=new TableView<CafeMember>();
 					int field_total=field_names.length;
-					TableColumn titleColumn =null;
+					TableColumn<CafeMember, String> titleColumn =null;
 					
 					for(int f=0;f<field_total;f++) {
-						titleColumn = new TableColumn(field_names[f]);
+						titleColumn = new TableColumn<CafeMember, String>(field_names[f]);
 						titleColumn.setMinWidth(100);
+						titleColumn.setCellValueFactory(new PropertyValueFactory<CafeMember,String>(field_names[f]));
 						table.getColumns().add(titleColumn);
 					}
+					
+					table.setItems(DataClass.members);
+					
 					
 //					TableView table = new TableView();
 //					TableColumn titleColum = new TableColumn("Title");

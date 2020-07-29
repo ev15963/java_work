@@ -11,8 +11,16 @@ import java.util.Arrays;
 
 import javax.xml.ws.FaultAction;
 
+import com.lsw.obj.CafeMember;
+import com.lsw.obj.DataClass;
 import com.lsw.ui.MainView;
 import com.lsw.util.ChangeEncoding;
+
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 public class DataBaseClass {
 
@@ -97,49 +105,93 @@ public class DataBaseClass {
 				System.err.println("selectAll() ERR :"+e.getMessage());
 			}
 		
+		/////////////////////////////
+		//table에 추가할 데이터 준비
+		//ArrayList와 동일한 역할을 담당하는 Java FX의 observableArrayList	
+		
+		//표형태로 데이터를 출력하는 component
+		TableView<CafeMember> table = new TableView<CafeMember>();
+		//table에 추가할 데이터 준비
+		
+//		TableColumn<CafeMember, String> seqno
+		
+		
+		//ArrayList와 동일한 역할을 담당하는 Java FX의 observableArrayList	
+		ObservableList<CafeMember> CM = FXCollections.observableArrayList();
+				
+//		CM.add(new CafeMember(0, "rexratm","이동후","멤버", "2020.07.01", "2020.07.28", 79, 0, 0, "남"));
+		//table에 데이터 추가
+		table.setItems(CM);
+		
+		//table에 열 추가
+		table.getColumns();
+		
+		DataClass.members.clear(); //화면전환시 다시 추가되는 걸 방지
+		CafeMember members = null;
+		while(rs.next()) {
+			members=new CafeMember();
+			members.setSeqno(rs.getString("seqno"));
+			members.setNickname(ChangeEncoding.mysqlToJava(rs.getString("nickname")));
+			members.setName(ChangeEncoding.mysqlToJava(rs.getString("name")));
+			members.setRating(rs.getString("rating"));
+			members.setRegidate(rs.getString("regidate"));
+			members.setLastdate(rs.getString("lastdate"));
+			members.setVisitno(rs.getString("visino"));
+			members.setPostno(rs.getString("postno"));
+			members.setReplyno(rs.getString("replyno"));
+			members.setGender(ChangeEncoding.mysqlToJava(rs.getString("Gender")));
+			DataClass.members.add(members);
+			members = null;
+		}
 
+		
+		
+		
 	} // selectAll() END
-
-	/** 각 자원들을 해체하는 메서드 */
-	public void userClose(ResultSet rs) {
-		try {
-			rs.close();
-		} catch (SQLException e) {
-			System.err.println("rs err" + e.getMessage());
-		}
-	} // userClose() END
-
-	public void userClose(ResultSet rs, Statement stmt) {
-		try {
-			rs.close();
-			stmt.close();
-		} catch (SQLException e) {
-			System.err.println("rs err stmt err" + e.getMessage());
-		}
-	} // userClose() END
-
-	public void userClose(ResultSet rs, PreparedStatement pstmt) {
-		try {
-			rs.close();
-			pstmt.close();
-		} catch (SQLException e) {
-			System.err.println("rs err pstmt err" + e.getMessage());
-		}
-	} // userClose() END
-
-	public void userClose(Statement stmt) {
-		try {
-			stmt.close();
-		} catch (SQLException e) {
-			System.err.println("stmt err" + e.getMessage());
-		}
-	} // userClose() END
-		// public void userClose(ResultSet rs) {
-		// try {
-		// rs.close();
-		// } catch (SQLException e) {
-		// System.err.println("rs err"+e.getMessage());
-		// }
-		// } //userClose() END
-
 }
+	/**3. TableView에 데이터 출력을 위한 데이터 준비 */
+	
+	
+	/** 각 자원들을 해체하는 메서드 */
+//	public void userClose(ResultSet rs) {
+//		try {
+//			rs.close();
+//		} catch (SQLException e) {
+//			System.err.println("rs err" + e.getMessage());
+//		}
+//	} // userClose() END
+//
+//	public void userClose(ResultSet rs, Statement stmt) {
+//		try {
+//			rs.close();
+//			stmt.close();
+//		} catch (SQLException e) {
+//			System.err.println("rs err stmt err" + e.getMessage());
+//		}
+//	} // userClose() END
+//
+//	public void userClose(ResultSet rs, PreparedStatement pstmt) {
+//		try {
+//			rs.close();
+//			pstmt.close();
+//		} catch (SQLException e) {
+//			System.err.println("rs err pstmt err" + e.getMessage());
+//		}
+//	} // userClose() END
+//
+//	public void userClose(Statement stmt) {
+//		try {
+//			stmt.close();
+//		} catch (SQLException e) {
+//			System.err.println("stmt err" + e.getMessage());
+//		}
+//	} // userClose() END
+//		// public void userClose(ResultSet rs) {
+//		// try {
+//		// rs.close();
+//		// } catch (SQLException e) {
+//		// System.err.println("rs err"+e.getMessage());
+//		// }
+//		// } //userClose() END
+//
+//}

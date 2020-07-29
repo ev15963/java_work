@@ -9,9 +9,10 @@ import javafx.application.Application;
 public class MainClass {
 
 	public static void main(String[] args) {
-//		DataBaseClass dbc=new DataBaseClass();
-//		dbc.connect_db();
+		DataBaseClass dbc=new DataBaseClass();
+		dbc.connect_db();
 		showMain();
+		dbc.selectAll("cafe_table");
 //		CafeMember cm = new CafeMember();
 		
 	}
