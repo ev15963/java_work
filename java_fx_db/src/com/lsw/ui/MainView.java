@@ -1,6 +1,7 @@
 package com.lsw.ui;
 
-import application.Album;
+import com.lsw.db.DataBaseClass;
+
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,9 +22,13 @@ import javafx.util.Callback;
 
 public class MainView extends Application {
 
+	private DataBaseClass dbc=null;
+	public static String[] field_names;
+	
 	public MainView() {
-		// TODO Auto-generated constructor stub
+		dbc=new DataBaseClass();
 	}
+
 
 	@Override
 	public void start(Stage stage) throws Exception { // 생성자
@@ -55,20 +60,33 @@ public class MainView extends Application {
 				BorderPane p = new BorderPane();
 				if (param == 0) {
 					/** 인덱스가 0일 경우의 페이지 처리 로직 구간 */
-					TableView table = new TableView();
-					TableColumn titleColum = new TableColumn("Title");
-					titleColum.setMinWidth(100); // 컬럼의 최소 크기
-					table.getColumns().add(titleColum);
+					TableView table=new TableView();
+					
+					dbc.connect_db();
+					dbc.selectAll("cafe_table");
+					int field_total=field_names.length;
+					TableColumn titleColumn =null;
+					
+					for(int f=0;f<field_total;f++) {
+						titleColumn = new TableColumn(field_names[f]);
+						titleColumn.setMinWidth(100);
+						table.getColumns().add(titleColumn);
+					}
+					
+//					TableView table = new TableView();
+//					TableColumn titleColum = new TableColumn("Title");
+//					titleColum.setMinWidth(100); // 컬럼의 최소 크기
+//					table.getColumns().add(titleColum);
+//
+//					TableColumn artistColumn = new TableColumn("Artist");
+//					artistColumn.setMinWidth(150);
+//					table.getColumns().add(artistColumn);
+//
+//					TableColumn releaseColumn = new TableColumn("Release Year");
+//					releaseColumn.setMinWidth(170);
+//					table.getColumns().add(releaseColumn);
 
-					TableColumn artistColumn = new TableColumn("Artist");
-					artistColumn.setMinWidth(150);
-					table.getColumns().add(artistColumn);
-
-					TableColumn releaseColumn = new TableColumn("Release Year");
-					releaseColumn.setMinWidth(170);
-					table.getColumns().add(releaseColumn);
-
-					p.setBottom(table);
+					p.setCenter(table);
 					
 				} else if (param == 1) {
 					/** 인덱스가 1일 경우의 처리 */

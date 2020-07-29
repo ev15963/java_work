@@ -47,7 +47,12 @@ public class DataBaseClass {
 	/** 1. mySQL server에 접속하는 메서드 선언 **/
 	public void connect_navercafe() {
 		// 1. mySQL 드라이버 로드
-		Class.forName(this.driver_name)
+		try {
+			Class.forName(this.driver_name);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/** 2. table의 전체 레코드 조회 메서드 선언 **/
