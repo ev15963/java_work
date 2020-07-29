@@ -30,7 +30,7 @@ public class MainClass {
 //		dbc.duplicateID("aaa");
 //		dbc.duplicateID("vvv");
 //		dbc.insertTable("ssss", "12345");
-//		dbc.updateTable("zzzz", "4444", 5);
+//		dbc.updateTable("zzzz",S "4444", 5);
 //		dbc.deleteRecord(10);
 //		dbc.selectAll();
 //		

@@ -84,7 +84,7 @@ public class MainView extends Application {
 //					TableView table = new TableView();
 //					TableColumn titleColum = new TableColumn("Title");
 //					titleColum.setMinWidth(100); // 컬럼의 최소 크기
-//					table.getColumns().add(titleColum);
+//					table.getColumns().add(titleColumff);
 //
 //					TableColumn artistColumn = new TableColumn("Artist");
 //					artistColumn.setMinWidth(150);

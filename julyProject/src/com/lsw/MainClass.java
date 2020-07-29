@@ -2,8 +2,11 @@ package com.lsw;
 
 public class MainClass {
 
-	public MainClass() {
-		// TODO Auto-generated constructor stub
+	public static void main(String[] args) {
+		DataBaseClass dbc = new DataBaseClass("company_db");
+		dbc.connect_companydb();
+		
+		dbc.
 	}
 
 }
