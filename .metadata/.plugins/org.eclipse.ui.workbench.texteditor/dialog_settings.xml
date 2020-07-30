@@ -2,12 +2,15 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="hbox" key="selection"/>
+		<item value="members" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="member"/>
+			<item value="columns"/>
+			<item value="columnCount"/>
 			<item value="hbox"/>
 			<item value="DRIVER con ERR"/>
 			<item value="conn"/>
@@ -20,11 +23,11 @@
 			<item value="SocketInputStream"/>
 			<item value="ㅇ"/>
 			<item value="1234"/>
-			<item value="pro"/>
-			<item value="Encoding"/>
-			<item value="End"/>
 		</list>
 		<list key="replacehistory">
+			<item value="members"/>
+			<item value="field_names"/>
+			<item value="field_count"/>
 			<item value="+="/>
 			<item value="tags+="/>
 			<item value="));"/>
@@ -37,16 +40,13 @@
 			<item value="nc.add(new NewsClass(&quot;"/>
 			<item value=".add("/>
 			<item value="tk[0]=new Takes(&quot;"/>
-			<item value="stu[0]=new Student(&quot;"/>
-			<item value="dep[0]=new Department("/>
-			<item value="Department dep[0]= new Department("/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="288" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 		<item value="348" key="DIALOG_HEIGHT"/>
-		<item value="799" key="DIALOG_X_ORIGIN"/>
-		<item value="336" key="DIALOG_Y_ORIGIN"/>
+		<item value="1132" key="DIALOG_X_ORIGIN"/>
+		<item value="236" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
