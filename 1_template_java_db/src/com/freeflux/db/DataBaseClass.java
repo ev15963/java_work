@@ -78,7 +78,7 @@ public class DataBaseClass {
 			//실제 query 실행요청 시, 실행할 query문을 mySQL에 전달!!!
 //			while(rs.next()) {
 //				System.out.println(rs.getString("empName"));
-//				String name=rs.getString("empName");
+//				String name=rs.getS"tring("empName");
 //				System.out.println(ChangeEncoding.toUnicode(name)); //인코딩
 //			}
 			this.rs.next();

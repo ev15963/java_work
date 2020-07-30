@@ -1,12 +1,13 @@
 package com.lsw;
 
+import java.util.Scanner;
+
 public class MainClass {
 
 	public static void main(String[] args) {
-		DataBaseClass dbc = new DataBaseClass("company_db");
-		dbc.connect_companydb();
-		
-		dbc.
+		DataBaseClass dbc = new DataBaseClass();
+		dbc.connect_companydb("company_db");
+		dbc.search();
 	}
 
 }

@@ -43,3 +43,19 @@ mysql> select * from company_table;
 |  7 | NHN          | 성남시   	   | 2013 |
 +----+--------------+----------+------+
 7 rows in set (0.00 sec)
+
+mysql> select * from company_table where name="네이버";
++----+--------+----------+------+
+| no | name   | location | year |
++----+--------+----------+------+
+|  1 | 네이버 	  | 성남시  	 | 1999 |
++----+--------+----------+------+
+1 row in set (0.00 sec)
+
+mysql> select * from company_table where year="1995";
++----+--------+----------+------+
+| no | name   | location | year |
++----+--------+----------+------+
+|  2 | 카카오 | 제주시   | 1995 |
++----+--------+----------+------+
+1 row in set (0.00 sec)
