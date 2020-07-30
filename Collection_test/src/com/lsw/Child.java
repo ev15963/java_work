@@ -1,7 +1,5 @@
 package com.lsw;
 
-import com.sun.javafx.beans.IDProperty;
-
 public class Child {
 
 	private String id, pw, name;
@@ -16,7 +14,8 @@ public class Child {
 		this.age=age;
 	}
 	
-//	privat 멤버에 대한 getter /setter
+
+//	public
 	
 	//toString() 재정의
 	@Override
@@ -29,5 +28,41 @@ public class Child {
 		
 		return builder.toString();
 	}
+	
+//	private 멤버에 대한 getter /setter
+	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getPw() {
+		return pw;
+	}
+
+	public void setPw(String pw) {
+		this.pw = pw;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	
 
 }
