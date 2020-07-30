@@ -52,10 +52,30 @@ mysql> select * from company_table where name="네이버";
 +----+--------+----------+------+
 1 row in set (0.00 sec)
 
+mysql> select * from company_table where location="서울시";
++----+--------------+----------+------+
+| no | name         | location | year |
++----+--------------+----------+------+
+|  3 | SK텔레콤  	    | 서울시  	   | 1984 |
+|  5 | LG유플러스   		| 서울시   	   | 1996 |
+|  6 | 이스트소프트 		| 서울시  	   | 1993 |
++----+--------------+----------+------+
+3 rows in set (0.00 sec)
+
 mysql> select * from company_table where year="1995";
 +----+--------+----------+------+
 | no | name   | location | year |
 +----+--------+----------+------+
-|  2 | 카카오 | 제주시   | 1995 |
+|  2 | 카카오	  |   제주시      | 1995 |
 +----+--------+----------+------+
 1 row in set (0.00 sec)
+
+create table company_table (no int auto_increment primary key, name varchar(20) not null, location varchar(10) not null, year  int not null default 0);
+insert into company_table (name,   location,  year) values ('네이버', '성남시', '1999');
+insert into company_table (name,   location,  year) values ('카카오', '제주시', '1995');
+insert into company_table (name,   location,  year) values ('SK텔레콤', '서울시', '1984');
+insert into company_table (name,   location,  year) values ('KT', '성남시', '1981');
+insert into company_table (name,   location,  year) values ('LG유플러스', '서울시', '1996');
+insert into company_table (name,   location,  year) values ('이스트소프트', '서울시', '1993');
+insert into company_table (name,   location,  year) values ('NHN', '성남시', '2013');
+select * from company_table;

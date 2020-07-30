@@ -8,8 +8,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-//import com.ㅣㄴ.util.ChangeEncoding;
-
 public class DataBaseClass {
 
 	// db 관련 상수선언
@@ -20,7 +18,7 @@ public class DataBaseClass {
 	// 3. mysql admin id
 	public final String Admin_ID = "root";
 	// 4. mysql admin password
-	// public final String Admin_PW = "1234";
+	public final String Admin_PW = "1234";
 
 	// database 관련 객체 선언
 	public String dbname = "";
@@ -38,10 +36,6 @@ public class DataBaseClass {
 	public DataBaseClass() {
 		// TODO Auto-generated constructor stub
 	}
-
-	// public DataBaseClass(String company_db) {
-	// this.company_db = company_db;
-	// }
 
 	/** 1. mySQL server에 접속하는 메서드 선언 */
 	public void connect_companydb(String dbname) {
@@ -65,7 +59,7 @@ public class DataBaseClass {
 			System.out.println("DRIVER ERR (혹시 build path 안했는지 확인 my-sql connector):" + e.getMessage());
 		}
 	}
-	
+
 	public void search() {
 
 		Scanner sc = new Scanner(System.in);
@@ -87,12 +81,12 @@ public class DataBaseClass {
 				String temp2 = sc.next();
 				selectYear("company_table", temp2);
 			} else {
-	
+
 				System.out.println("잘못입력");
 			}
 		}
+		
 	}
-	
 
 	/**
 	 * 2. table의 전체 레코드 조회 메서드 선언
@@ -108,9 +102,7 @@ public class DataBaseClass {
 			// 3. query 실행
 			this.rs = this.stmt.executeQuery(query);
 			// 4. ResultSet 객체 내부 데이터를 ArryayList에 객체로 추가
-			// ObjectClass oj = null;
 			while (rs.next()) {
-				// System.out.println(rs.getInt("no"));
 				System.out.println("기업명 : " + ChangeEncoding.mysqlToJava(rs.getString("name")));
 				System.out.println("위치 : " + ChangeEncoding.mysqlToJava(rs.getString("location")));
 				System.out.println("설립년도 : " + rs.getString("year"));
@@ -136,18 +128,13 @@ public class DataBaseClass {
 		try {
 			this.pstmt = this.conn.prepareStatement(query);
 			this.pstmt.setString(1, ChangeEncoding.javaToMysql(rldjqaud));
-			// System.out.println(query);
 			this.rs = this.pstmt.executeQuery(); // 결과 값에 담음
-			//if (this.rs == rldjqaud) {
-				System.out.println(rldjqaud + "의 기업정보를 검색하였습니다.");
-				while (rs.next()) {
+			System.out.println(rldjqaud + "의 기업정보를 검색하였습니다.");
+			while (rs.next()) {
 				System.out.println("기업명 : " + ChangeEncoding.mysqlToJava(rs.getString("name")) + "\n" + "위치 : "
 						+ ChangeEncoding.mysqlToJava(rs.getString("location")) + "\n" + "설립년도 : "
 						+ rs.getString("year"));
-				}
-//			}else {
-//				System.out.println("잘못입력하였습니다.");
-//				}
+			}
 
 		} catch (SQLException e) {
 			System.err.println("selectRldjq() ERR" + e.getMessage());
@@ -161,15 +148,12 @@ public class DataBaseClass {
 		}
 	}
 
-
 	public void selectWlsur(String table_name, String wldur) { // 지역검색
 		// 1. query 생성
 		String query = "select * from " + table_name + " where location=?";
-		// System.out.println(query);
 		try {
 			this.pstmt = this.conn.prepareStatement(query);
 			this.pstmt.setString(1, ChangeEncoding.javaToMysql(wldur));
-			// System.out.println(query);
 			this.rs = this.pstmt.executeQuery(); // 결과 값에 담음
 			System.out.println(wldur + "에 있는 기업을 검색하였습니다.");
 			while (rs.next()) {
@@ -177,8 +161,6 @@ public class DataBaseClass {
 						+ ChangeEncoding.mysqlToJava(rs.getString("location")) + "\n" + "설립년도 : "
 						+ rs.getString("year"));
 			}
-			// System.out.println("ddd");
-
 		} catch (SQLException e) {
 			System.err.println("selectWlsur() ERR" + e.getMessage());
 		} finally {
@@ -189,17 +171,14 @@ public class DataBaseClass {
 				System.err.println("selectWlsur() close ERR" + e.getMessage());
 			}
 		}
-	}///////////////
-	
-	
+	}
+
 	public void selectYear(String table_name, String Year) { // 지역검색
 		// 1. query 생성
 		String query = "select * from " + table_name + " where year=?";
-		// System.out.println(query);
 		try {
 			this.pstmt = this.conn.prepareStatement(query);
 			this.pstmt.setString(1, Year);
-			// System.out.println(query);
 			this.rs = this.pstmt.executeQuery(); // 결과 값에 담음
 			System.out.println(Year + "년에 설립한 기업을 검색하였습니다.");
 			while (rs.next()) {
@@ -207,7 +186,6 @@ public class DataBaseClass {
 						+ ChangeEncoding.mysqlToJava(rs.getString("location")) + "\n" + "설립년도 : "
 						+ rs.getString("year"));
 			}
-			// System.out.println("ddd");
 
 		} catch (SQLException e) {
 			System.err.println("selectWlsur() ERR" + e.getMessage());
@@ -219,6 +197,6 @@ public class DataBaseClass {
 				System.err.println("selectWlsur() close ERR" + e.getMessage());
 			}
 		}
-	}///////////////
+	}
 
 }
