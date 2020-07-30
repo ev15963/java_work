@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javafx.stage.FileChooser"/>
-<fullyQualifiedTypeName name="javafx.stage.FileChooser.ExtensionFilter"/>
-<fullyQualifiedTypeName name="javafx.scene.control.Menu"/>
-<fullyQualifiedTypeName name="java.beans.EventHandler"/>
-<fullyQualifiedTypeName name="javafx.scene.control.MenuBar"/>
-<fullyQualifiedTypeName name="javafx.scene.control.MenuItem"/>
-<fullyQualifiedTypeName name="java.io.File"/>
-<fullyQualifiedTypeName name="javafx.scene.image.Image"/>
-<fullyQualifiedTypeName name="javafx.scene.control.ComboBox"/>
-<fullyQualifiedTypeName name="javafx.scene.layout.HBox"/>
-<fullyQualifiedTypeName name="javafx.scene.text.Text"/>
 <fullyQualifiedTypeName name="javafx.event.EventHandler"/>
 <fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
 <fullyQualifiedTypeName name="javafx.scene.text.FontPosture"/>
@@ -36,9 +25,7 @@
 <fullyQualifiedTypeName name="javafx.scene.control.TextField"/>
 <fullyQualifiedTypeName name="java.beans.Statement"/>
 <fullyQualifiedTypeName name="javax.xml.stream.events.StartElement"/>
-<fullyQualifiedTypeName name="java.sql.DriverManager"/>
 <fullyQualifiedTypeName name="javax.xml.ws.FaultAction"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.sql.ResultSetMetaData"/>
 <fullyQualifiedTypeName name="com.lsw.ui.MainView"/>
@@ -48,7 +35,6 @@
 <fullyQualifiedTypeName name="javafx.collections.FXCollections"/>
 <fullyQualifiedTypeName name="com.lsw.util.ChangeEncoding"/>
 <fullyQualifiedTypeName name="javafx.scene.control.TableView"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="javafx.scene.control.cell.PropertyValueFactory"/>
 <fullyQualifiedTypeName name="com.lsw.obj.CafeMember"/>
 <fullyQualifiedTypeName name="javafx.scene.control.TableColumn"/>
@@ -59,5 +45,19 @@
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="com.lsw.DataBaseClass"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="org.omg.Messaging.SyncScopeHelper"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="com.sun.javafx.beans.IDProperty"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="com.lsw.ChangeEncoding"/>
+<fullyQualifiedTypeName name="java.lang.NegativeArraySizeException"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

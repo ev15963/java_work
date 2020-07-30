@@ -2,12 +2,18 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="members" key="selection"/>
+		<item value="pstmt" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="pstmt"/>
+			<item value="kimKi"/>
+			<item value="kim"/>
+			<item value="ki"/>
+			<item value="driver_name"/>
+			<item value="connect_companydb"/>
 			<item value="member"/>
 			<item value="columns"/>
 			<item value="columnCount"/>
@@ -17,12 +23,6 @@
 			<item value="makeHTML"/>
 			<item value="datagram"/>
 			<item value="DRIVER"/>
-			<item value="qp"/>
-			<item value="close"/>
-			<item value="BufferedReader"/>
-			<item value="SocketInputStream"/>
-			<item value="ㅇ"/>
-			<item value="1234"/>
 		</list>
 		<list key="replacehistory">
 			<item value="members"/>
@@ -46,7 +46,7 @@
 		<item value="288" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 		<item value="348" key="DIALOG_HEIGHT"/>
-		<item value="1132" key="DIALOG_X_ORIGIN"/>
-		<item value="236" key="DIALOG_Y_ORIGIN"/>
+		<item value="707" key="DIALOG_X_ORIGIN"/>
+		<item value="466" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
