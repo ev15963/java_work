@@ -2,12 +2,14 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="pstmt" key="selection"/>
+		<item value="DataBaseClass" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="ObjectClass"/>
+			<item value="Object"/>
 			<item value="pstmt"/>
 			<item value="kimKi"/>
 			<item value="kim"/>
@@ -21,8 +23,6 @@
 			<item value="DRIVER con ERR"/>
 			<item value="conn"/>
 			<item value="makeHTML"/>
-			<item value="datagram"/>
-			<item value="DRIVER"/>
 		</list>
 		<list key="replacehistory">
 			<item value="members"/>
