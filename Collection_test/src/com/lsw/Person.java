@@ -6,18 +6,40 @@ public class Person {
 
 	// 아이디, 비밀번호, 이름, 나이를 받는 Child 클래스
 
-//	Person 클래스 멤버변수
+	// Person 클래스 멤버변수
 	private String id, pw, name;
-	
-//	Person 클래스 생성자
+
+	// Person 클래스 생성자
 	public Person(String id, String pw, String name) {
-	    super();
-	    this.id = id;
-	    this.pw = pw;
-	    this.name = name;
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.name = name;
 	}
-	
-	
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getPw() {
+		return pw;
+	}
+
+	public void setPw(String pw) {
+		this.pw = pw;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	// toString() 재정의
 	@Override
