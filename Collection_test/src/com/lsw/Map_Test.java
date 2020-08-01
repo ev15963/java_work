@@ -61,9 +61,9 @@ public class Map_Test {
 		// Set형으로 리턴하는 메서드
 		//
 		Set<Integer> keySet = map.keySet();
-		System.out.println(keySet);
+		System.out.println(keySet); //[0, 1, 3, 4, 5]
 
-		System.out.println(map.keySet());
+		System.out.println(map.keySet()); //[0, 1, 3, 4, 5]
 		//
 		// 위 코드에서 키를 저장한 Set 컬렉션인 keySet 참조 변수를 활용하면
 		// Map 컬렉션의 전체 요소에 접근할 수 있다.
@@ -71,11 +71,21 @@ public class Map_Test {
 		//
 		// 반복자(Iterator)를 활용하여 Map 컬렉션의 전체 값을 콘솔 화면에 출력할 수 있다.
 
+		
+		
 		Iterator<Integer> iter = keySet.iterator();
 		while (iter.hasNext()) {
 			int num = iter.next();
-			System.out.println(map.get(num));
+//			System.out.println(iter);
+			System.out.println(num);	//0 1 3 4 5
+			System.out.println(map.get(num));	
 		}
+		
+//		가나다
+//		사아자
+//		차카타
+//		파하갸
+//		냐댜랴
 
 		// .iterator() | 컬렉션의 참조를 Iterator 형 참조 변수에 저장해준다
 		// .next() | Iterator의 메소드이며, Iterator 형 참조 변수에 참조된 컬렉션의 요소를 꺼내어 준다.
@@ -83,16 +93,16 @@ public class Map_Test {
 		// .remove() | 입력받은 키에 해당하는 요소를 삭제한다.
 		
 		 map.remove(3); // 키 이름
-		 System.out.println(map);
+		 System.out.println(map); //{0=가나다, 1=사아자, 4=파하갸, 5=냐댜랴}
 		//
 		// .clear() | 컬렉션의 모든 요소를 삭제하는 메소드
 		// *참조 변수에 null을 대입하는 방법도 있다.
 
 		map.clear();
-		System.out.println(map);
+		System.out.println(map);  //{}
 
 		map = null;
-		System.out.println(map);
+		System.out.println(map); //null
 
 		// -----------------------------------------------------
 		// 배열 => 기본데이터를 저장하는 것이 주 목적(원시)
